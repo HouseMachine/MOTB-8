@@ -1,4 +1,4 @@
-﻿{
+{
     "$schema":  "https://json-schema.org/draft/2020-12/schema",
     "$id":  "https://github.com/HouseMachine/MOTB-8/blob/main/schemas/beacon.schema.json",
     "title":  "MOTB-8 Beacon v0.1",
