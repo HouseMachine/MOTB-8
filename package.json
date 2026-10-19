@@ -4,7 +4,8 @@
   "description": "Open-source Machine Open Tag &amp; Beacon protocol for persistent, discoverable machine presence.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
