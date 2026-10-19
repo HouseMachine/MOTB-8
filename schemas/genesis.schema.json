@@ -1,0 +1,69 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HouseMachine/MOTB-8/blob/main/schemas/genesis.schema.json",
+  "title": "MOTB-8 Genesis Record v0.1",
+  "description": "Immutable initial controller-binding claim for a canonical MOTB-8 Tag.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "motb8Tag",
+    "createdAt",
+    "controller",
+    "proof"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "motb8Tag": {
+      "type": "string",
+      "pattern": "^\\(\\[\\[!MOTB-8:1:[0-9A-HJKMNP-TV-Z]{32}:[0-9A-HJKMNP-TV-Z]{2}\\]\\]\\)$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "controller": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "publicKeyJwk"],
+      "properties": {
+        "id": { "const": "#controller-1" },
+        "type": { "const": "Ed25519" },
+        "publicKeyJwk": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kty", "crv", "x"],
+          "properties": {
+            "kty": { "const": "OKP" },
+            "crv": { "const": "Ed25519" },
+            "x": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{43}$"
+            }
+          }
+        }
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "verificationMethod",
+        "canonicalization",
+        "signature"
+      ],
+      "properties": {
+        "type": { "const": "Ed25519Signature2026" },
+        "verificationMethod": { "const": "#controller-1" },
+        "canonicalization": { "const": "RFC8785-JCS" },
+        "signature": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{86}$"
+        }
+      }
+    }
+  }
+}
