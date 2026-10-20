@@ -1,13 +1,14 @@
-﻿import { createPublicKey, verify } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { createPublicKey, verify } from "node:crypto";
+
 import canonicalize from "canonicalize";
-import Ajv2020 from "ajv/dist/2020.js";
-import addFormats from "ajv-formats";
 
 import { parseMotb8Tag } from "../tag/parse.js";
 import { verifyGenesisRecord } from "../genesis/verify.js";
 import type { GenesisRecord } from "../genesis/create.js";
 import type { MOTB8BeaconV01 } from "./types.js";
+import type { MOTB8BeaconV11 } from "./types-v1.1.js";
+import { validateBeaconStructure } from "./validate.js";
+import { generateDiscoverySummary } from "./summary.js";
 
 export interface BeaconVerificationResult {
   valid: boolean;
@@ -15,23 +16,11 @@ export interface BeaconVerificationResult {
   reason: string;
 }
 
-const schema = JSON.parse(
-  readFileSync(
-    new URL("../../schemas/beacon.schema.json", import.meta.url),
-    "utf8"
-  ).replace(/^\uFEFF/, "")
-) as object;
-
-const AjvConstructor = Ajv2020.default;
-const ajv = new AjvConstructor({ allErrors: true });
-addFormats.default(ajv);
-const validateSchema = ajv.compile(schema);
-
 export function verifyBeacon(
   beaconInput: unknown,
   genesisInput: unknown
 ): BeaconVerificationResult {
-  if (!validateSchema(beaconInput)) {
+  if (!validateBeaconStructure(beaconInput)) {
     return {
       valid: false,
       genesisStatus: "UNRESOLVED",
@@ -39,7 +28,7 @@ export function verifyBeacon(
     };
   }
 
-  const beacon = beaconInput as MOTB8BeaconV01;
+  const beacon = beaconInput as MOTB8BeaconV01 | MOTB8BeaconV11;
   const genesisResult = verifyGenesisRecord(genesisInput);
 
   if (genesisResult.status === "INVALID") {
@@ -62,6 +51,12 @@ export function verifyBeacon(
 
   try {
     parseMotb8Tag(beacon.motb8Tag);
+
+    const expectedSummary = generateDiscoverySummary(beacon);
+
+    if (beacon.discoverySummary !== expectedSummary) {
+      throw new Error("Beacon discovery summary mismatch");
+    }
 
     if (beacon.motb8Tag !== genesis.motb8Tag) {
       throw new Error("Beacon and Genesis Tag mismatch");

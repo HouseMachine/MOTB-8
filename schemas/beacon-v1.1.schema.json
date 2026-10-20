@@ -1,0 +1,533 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "$id":  "https://github.com/HouseMachine/MOTB-8/blob/main/schemas/beacon-v1.1.schema.json",
+    "title":  "MOTB-8 Beacon v1.1",
+    "description":  "Signed machine-readable description of a persistent MOTB-8 machine presence.",
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "schemaVersion",
+                     "motb8Tag",
+                     "name",
+                     "presenceScope",
+                     "presenceType",
+                     "description",
+                     "goodFaith",
+                     "status",
+                     "createdAt",
+                     "updatedAt",
+                     "controller",
+                     "discoverySummary",
+                     "proof",
+                     "revision"
+                 ],
+    "properties":  {
+                       "schemaVersion":  {
+                                             "const":  "1.1"
+                                         },
+                       "motb8Tag":  {
+                                        "type":  "string",
+                                        "pattern":  "^\\(\\[\\[!MOTB-8:1:[0-9A-HJKMNP-TV-Z]{32}:[0-9A-HJKMNP-TV-Z]{2}\\]\\]\\)$"
+                                    },
+                       "name":  {
+                                    "type":  "string",
+                                    "minLength":  1,
+                                    "maxLength":  150
+                                },
+                       "presenceScope":  {
+                                             "enum":  [
+                                                          "single",
+                                                          "composite"
+                                                      ]
+                                         },
+                       "presenceType":  {
+                                            "enum":  [
+                                                         "agent",
+                                                         "machine",
+                                                         "swarm",
+                                                         "gateway",
+                                                         "robot",
+                                                         "iot-system",
+                                                         "other"
+                                                     ]
+                                        },
+                       "description":  {
+                                           "type":  "string",
+                                           "minLength":  20,
+                                           "maxLength":  500
+                                       },
+                       "representedSystemCount":  {
+                                                      "type":  "integer",
+                                                      "minimum":  2
+                                                  },
+                       "customPresenceType":  {
+                                                  "maxLength":  80,
+                                                  "minLength":  2,
+                                                  "type":  "string"
+                                              },
+                       "goodFaith":  {
+                                         "additionalProperties":  false,
+                                         "properties":  {
+                                                            "termsVersion":  {
+                                                                                 "minLength":  1,
+                                                                                 "type":  "string"
+                                                                             },
+                                                            "acknowledgedAt":  {
+                                                                                   "type":  "string",
+                                                                                   "format":  "date-time"
+                                                                               },
+                                                            "acknowledged":  {
+                                                                                 "const":  true
+                                                                             }
+                                                        },
+                                         "type":  "object",
+                                         "required":  [
+                                                          "acknowledged",
+                                                          "termsVersion",
+                                                          "acknowledgedAt"
+                                                      ]
+                                     },
+                       "status":  {
+                                      "const":  "active"
+                                  },
+                       "createdAt":  {
+                                         "type":  "string",
+                                         "format":  "date-time"
+                                     },
+                       "updatedAt":  {
+                                         "type":  "string",
+                                         "format":  "date-time"
+                                     },
+                       "discoverySummary":  {
+                                                "maxLength":  2000,
+                                                "minLength":  1,
+                                                "type":  "string"
+                                            },
+                       "controller":  {
+                                          "type":  "object",
+                                          "additionalProperties":  false,
+                                          "required":  [
+                                                           "id",
+                                                           "type",
+                                                           "publicKeyJwk"
+                                                       ],
+                                          "properties":  {
+                                                             "id":  {
+                                                                        "const":  "#controller-1"
+                                                                    },
+                                                             "type":  {
+                                                                          "const":  "Ed25519"
+                                                                      },
+                                                             "publicKeyJwk":  {
+                                                                                  "type":  "object",
+                                                                                  "additionalProperties":  false,
+                                                                                  "required":  [
+                                                                                                   "kty",
+                                                                                                   "crv",
+                                                                                                   "x"
+                                                                                               ],
+                                                                                  "properties":  {
+                                                                                                     "kty":  {
+                                                                                                                 "const":  "OKP"
+                                                                                                             },
+                                                                                                     "crv":  {
+                                                                                                                 "const":  "Ed25519"
+                                                                                                             },
+                                                                                                     "x":  {
+                                                                                                               "type":  "string",
+                                                                                                               "pattern":  "^[A-Za-z0-9_-]{43}$"
+                                                                                                           }
+                                                                                                 }
+                                                                              }
+                                                         }
+                                      },
+                       "proof":  {
+                                     "type":  "object",
+                                     "additionalProperties":  false,
+                                     "required":  [
+                                                      "type",
+                                                      "verificationMethod",
+                                                      "canonicalization",
+                                                      "signature"
+                                                  ],
+                                     "properties":  {
+                                                        "type":  {
+                                                                     "const":  "Ed25519Signature2026"
+                                                                 },
+                                                        "verificationMethod":  {
+                                                                                   "const":  "#controller-1"
+                                                                               },
+                                                        "canonicalization":  {
+                                                                                 "const":  "RFC8785-JCS"
+                                                                             },
+                                                        "signature":  {
+                                                                          "type":  "string",
+                                                                          "pattern":  "^[A-Za-z0-9_-]{86}$"
+                                                                      }
+                                                    }
+                                 },
+                       "taxonomy":  {
+                                        "items":  {
+                                                      "additionalProperties":  false,
+                                                      "properties":  {
+                                                                         "domain":  {
+                                                                                        "maxLength":  120,
+                                                                                        "minLength":  1,
+                                                                                        "type":  "string"
+                                                                                    },
+                                                                         "subcategory":  {
+                                                                                             "maxLength":  120,
+                                                                                             "minLength":  1,
+                                                                                             "type":  "string"
+                                                                                         },
+                                                                         "category":  {
+                                                                                          "maxLength":  120,
+                                                                                          "minLength":  1,
+                                                                                          "type":  "string"
+                                                                                      }
+                                                                     },
+                                                      "type":  "object",
+                                                      "required":  [
+                                                                       "domain",
+                                                                       "category"
+                                                                   ]
+                                                  },
+                                        "type":  "array"
+                                    },
+                       "capabilities":  {
+                                            "items":  {
+                                                          "additionalProperties":  false,
+                                                          "properties":  {
+                                                                             "vocabulary":  {
+                                                                                                "maxLength":  200,
+                                                                                                "type":  "string"
+                                                                                            },
+                                                                             "description":  {
+                                                                                                 "maxLength":  500,
+                                                                                                 "type":  "string"
+                                                                                             },
+                                                                             "name":  {
+                                                                                          "maxLength":  160,
+                                                                                          "minLength":  1,
+                                                                                          "type":  "string"
+                                                                                      },
+                                                                             "id":  {
+                                                                                        "maxLength":  160,
+                                                                                        "minLength":  1,
+                                                                                        "type":  "string"
+                                                                                    }
+                                                                         },
+                                                          "type":  "object",
+                                                          "required":  [
+                                                                           "id",
+                                                                           "name"
+                                                                       ]
+                                                      },
+                                            "type":  "array"
+                                        },
+                       "profiles":  {
+                                        "additionalProperties":  false,
+                                        "properties":  {
+                                                           "links":  {
+                                                                         "items":  {
+                                                                                       "additionalProperties":  false,
+                                                                                       "properties":  {
+                                                                                                          "label":  {
+                                                                                                                        "maxLength":  160,
+                                                                                                                        "minLength":  1,
+                                                                                                                        "type":  "string"
+                                                                                                                    },
+                                                                                                          "url":  {
+                                                                                                                      "maxLength":  2048,
+                                                                                                                      "format":  "uri",
+                                                                                                                      "type":  "string"
+                                                                                                                  },
+                                                                                                          "type":  {
+                                                                                                                       "maxLength":  100,
+                                                                                                                       "minLength":  1,
+                                                                                                                       "type":  "string"
+                                                                                                                   }
+                                                                                                      },
+                                                                                       "type":  "object",
+                                                                                       "required":  [
+                                                                                                        "type",
+                                                                                                        "url"
+                                                                                                    ]
+                                                                                   },
+                                                                         "type":  "array"
+                                                                     },
+                                                           "developers":  {
+                                                                              "uniqueItems":  true,
+                                                                              "items":  {
+                                                                                            "maxLength":  160,
+                                                                                            "minLength":  1,
+                                                                                            "type":  "string"
+                                                                                        },
+                                                                              "type":  "array"
+                                                                          },
+                                                           "organizations":  {
+                                                                                 "uniqueItems":  true,
+                                                                                 "items":  {
+                                                                                               "maxLength":  160,
+                                                                                               "minLength":  1,
+                                                                                               "type":  "string"
+                                                                                           },
+                                                                                 "type":  "array"
+                                                                             }
+                                                       },
+                                        "type":  "object"
+                                    },
+                       "catalogs":  {
+                                        "additionalProperties":  false,
+                                        "properties":  {
+                                                           "native":  {
+                                                                          "items":  {
+                                                                                        "additionalProperties":  false,
+                                                                                        "properties":  {
+                                                                                                           "resourceUrl":  {
+                                                                                                                               "maxLength":  2048,
+                                                                                                                               "format":  "uri",
+                                                                                                                               "type":  "string"
+                                                                                                                           },
+                                                                                                           "description":  {
+                                                                                                                               "maxLength":  500,
+                                                                                                                               "minLength":  1,
+                                                                                                                               "type":  "string"
+                                                                                                                           },
+                                                                                                           "direction":  {
+                                                                                                                             "enum":  [
+                                                                                                                                          "OFFER",
+                                                                                                                                          "SEEK"
+                                                                                                                                      ]
+                                                                                                                         },
+                                                                                                           "id":  {
+                                                                                                                      "maxLength":  160,
+                                                                                                                      "minLength":  1,
+                                                                                                                      "type":  "string"
+                                                                                                                  },
+                                                                                                           "name":  {
+                                                                                                                        "maxLength":  160,
+                                                                                                                        "minLength":  1,
+                                                                                                                        "type":  "string"
+                                                                                                                    }
+                                                                                                       },
+                                                                                        "type":  "object",
+                                                                                        "required":  [
+                                                                                                         "id",
+                                                                                                         "direction",
+                                                                                                         "name",
+                                                                                                         "description"
+                                                                                                     ]
+                                                                                    },
+                                                                          "type":  "array"
+                                                                      },
+                                                           "external":  {
+                                                                            "items":  {
+                                                                                          "additionalProperties":  false,
+                                                                                          "properties":  {
+                                                                                                             "label":  {
+                                                                                                                           "maxLength":  160,
+                                                                                                                           "minLength":  1,
+                                                                                                                           "type":  "string"
+                                                                                                                       },
+                                                                                                             "url":  {
+                                                                                                                         "maxLength":  2048,
+                                                                                                                         "format":  "uri",
+                                                                                                                         "type":  "string"
+                                                                                                                     },
+                                                                                                             "format":  {
+                                                                                                                            "maxLength":  100,
+                                                                                                                            "type":  "string"
+                                                                                                                        }
+                                                                                                         },
+                                                                                          "type":  "object",
+                                                                                          "required":  [
+                                                                                                           "url"
+                                                                                                       ]
+                                                                                      },
+                                                                            "type":  "array"
+                                                                        }
+                                                       },
+                                        "type":  "object"
+                                    },
+                       "protocols":  {
+                                         "items":  {
+                                                       "additionalProperties":  false,
+                                                       "properties":  {
+                                                                          "endpoints":  {
+                                                                                            "items":  {
+                                                                                                          "maxLength":  2048,
+                                                                                                          "format":  "uri",
+                                                                                                          "type":  "string"
+                                                                                                      },
+                                                                                            "type":  "array"
+                                                                                        },
+                                                                          "id":  {
+                                                                                     "maxLength":  120,
+                                                                                     "minLength":  1,
+                                                                                     "type":  "string"
+                                                                                 },
+                                                                          "documentation":  {
+                                                                                                "maxLength":  2048,
+                                                                                                "format":  "uri",
+                                                                                                "type":  "string"
+                                                                                            },
+                                                                          "version":  {
+                                                                                          "maxLength":  80,
+                                                                                          "type":  "string"
+                                                                                      }
+                                                                      },
+                                                       "type":  "object",
+                                                       "required":  [
+                                                                        "id"
+                                                                    ]
+                                                   },
+                                         "type":  "array"
+                                     },
+                       "attachments":  {
+                                           "items":  {
+                                                         "additionalProperties":  false,
+                                                         "properties":  {
+                                                                            "data":  {
+                                                                                         "type":  "object"
+                                                                                     },
+                                                                            "version":  {
+                                                                                            "maxLength":  40,
+                                                                                            "minLength":  1,
+                                                                                            "type":  "string"
+                                                                                        },
+                                                                            "type":  {
+                                                                                         "maxLength":  200,
+                                                                                         "minLength":  1,
+                                                                                         "type":  "string"
+                                                                                     }
+                                                                        },
+                                                         "type":  "object",
+                                                         "required":  [
+                                                                          "type",
+                                                                          "version",
+                                                                          "data"
+                                                                      ]
+                                                     },
+                                           "type":  "array"
+                                       },
+                       "reachability":  {
+                                            "items":  {
+                                                          "additionalProperties":  false,
+                                                          "properties":  {
+                                                                             "label":  {
+                                                                                           "maxLength":  160,
+                                                                                           "minLength":  1,
+                                                                                           "type":  "string"
+                                                                                       },
+                                                                             "value":  {
+                                                                                           "maxLength":  2048,
+                                                                                           "minLength":  1,
+                                                                                           "type":  "string"
+                                                                                       },
+                                                                             "type":  {
+                                                                                          "maxLength":  100,
+                                                                                          "minLength":  1,
+                                                                                          "type":  "string"
+                                                                                      }
+                                                                         },
+                                                          "type":  "object",
+                                                          "required":  [
+                                                                           "type",
+                                                                           "value"
+                                                                       ]
+                                                      },
+                                            "type":  "array"
+                                        },
+                       "relationships":  {
+                                             "items":  {
+                                                           "additionalProperties":  false,
+                                                           "properties":  {
+                                                                              "label":  {
+                                                                                            "maxLength":  160,
+                                                                                            "minLength":  1,
+                                                                                            "type":  "string"
+                                                                                        },
+                                                                              "target":  {
+                                                                                             "maxLength":  2048,
+                                                                                             "minLength":  1,
+                                                                                             "type":  "string"
+                                                                                         },
+                                                                              "type":  {
+                                                                                           "maxLength":  120,
+                                                                                           "minLength":  1,
+                                                                                           "type":  "string"
+                                                                                       }
+                                                                          },
+                                                           "type":  "object",
+                                                           "required":  [
+                                                                            "type",
+                                                                            "target"
+                                                                        ]
+                                                       },
+                                             "type":  "array"
+                                         },
+                       "revision":  {
+                                        "type":  "integer",
+                                        "minimum":  1
+                                    },
+                       "previousBeaconHash":  {
+                                                  "type":  "string",
+                                                  "pattern":  "^[0-9a-f]{64}$"
+                                              }
+                   },
+    "allOf":  [
+                  {
+                      "then":  {
+                                   "required":  [
+                                                    "representedSystemCount"
+                                                ]
+                               },
+                      "if":  {
+                                 "properties":  {
+                                                    "presenceScope":  {
+                                                                          "const":  "composite"
+                                                                      }
+                                                }
+                             }
+                  },
+                  {
+                      "then":  {
+                                   "required":  [
+                                                    "customPresenceType"
+                                                ]
+                               },
+                      "if":  {
+                                 "properties":  {
+                                                    "presenceType":  {
+                                                                         "const":  "other"
+                                                                     }
+                                                }
+                             }
+                  },
+                  {
+                      "then":  {
+                                   "not":  {
+                                               "required":  [
+                                                                "previousBeaconHash"
+                                                            ]
+                                           }
+                               },
+                      "if":  {
+                                 "properties":  {
+                                                    "revision":  {
+                                                                     "const":  1
+                                                                 }
+                                                },
+                                 "required":  [
+                                                  "revision"
+                                              ]
+                             },
+                      "else":  {
+                                   "required":  [
+                                                    "previousBeaconHash"
+                                                ]
+                               }
+                  }
+              ]
+}

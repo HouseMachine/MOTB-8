@@ -1,4 +1,4 @@
-﻿export const MOTB8_NAME = "Machine Open Tag & Beacon";
+export const MOTB8_NAME = "Machine Open Tag & Beacon";
 export const MOTB8_VERSION = "0.1.0";
 
 export { generateMotb8Tag } from "./tag/generate.js";
@@ -43,3 +43,50 @@ export type {
 export type {
   ControlFileMetadata
 } from "./control/aad.js";
+
+/**
+ * Phase 23.6 — Discovery and revision-aware Beacons
+ */
+
+export { generateDiscoverySummary } from "./beacon/summary.js";
+export { computeBeaconHash } from "./beacon/hash.js";
+export { verifyBeaconRevision } from "./beacon/revision.js";
+export { verifyBeaconChain } from "./beacon/chain.js";
+
+export type { MOTB8BeaconV11 } from "./beacon/types-v1.1.js";
+export type { SignedBeacon } from "./beacon/sign.js";
+export type { DiscoverySummaryInput } from "./beacon/summary.js";
+
+export type {
+  BeaconRevisionVerificationResult
+} from "./beacon/revision.js";
+
+export type {
+  BeaconChainStatus,
+  BeaconChainVerificationResult
+} from "./beacon/chain.js";
+
+/**
+ * Phase 23.6 — Machine-presence lifecycle
+ */
+
+export { createPresence } from "./presence/create.js";
+export { updatePresenceBeacon } from "./presence/update.js";
+export { migratePresenceBeacon } from "./presence/migrate.js";
+
+export type {
+  PresenceRegistration,
+  CreatePresenceInput,
+  CreatedPresence
+} from "./presence/types.js";
+
+export type {
+  BeaconUpdateChanges,
+  UpdatePresenceBeaconInput,
+  UpdatedPresenceBeacon
+} from "./presence/update-types.js";
+
+export type {
+  MigratePresenceBeaconInput,
+  MigratedPresenceBeacon
+} from "./presence/migration-types.js";

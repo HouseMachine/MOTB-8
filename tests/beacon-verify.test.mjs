@@ -38,7 +38,7 @@ function createFixture() {
       type: "Ed25519",
       publicKeyJwk: controller.publicKeyJwk
     },
-    discoverySummary: "Atlas Research | single agent | autonomous research and information analysis system"
+    discoverySummary: "Atlas Research | single agent | Autonomous research and information analysis system."
   };
 
   return {
@@ -158,4 +158,23 @@ test("signBeacon rejects mismatched controller private keys", () => {
     () => signBeacon(unsigned, other.privateKey),
     /Beacon controller key mismatch/
   );
+});
+
+
+test("validly signed Beacon with incorrect discovery summary is rejected", () => {
+  const { controller, genesis, beacon } = createFixture();
+
+  const { proof, ...unsigned } = beacon;
+
+  const incorrect = {
+    ...unsigned,
+    discoverySummary: "This summary does not match the declared machine presence."
+  };
+
+  const signedIncorrect = signBeacon(incorrect, controller.privateKey);
+
+  const result = verifyBeacon(signedIncorrect, genesis);
+
+  assert.equal(result.valid, false);
+  assert.match(result.reason, /discovery summary mismatch/);
 });

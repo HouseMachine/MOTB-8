@@ -186,3 +186,59 @@ Pending:
 
 MOTB-8 must prioritize secure key handling without making unsupported guarantees of complete memory erasure.
 
+
+## 12. Operation-Oriented Beacon Signing
+
+Phase 23.6 introduces an operation-oriented signing boundary through:
+
+    src/control/sign-authorized.ts
+
+The authorized Beacon update coordinator no longer directly receives a decrypted controller private-key object.
+
+Instead, the coordinator:
+
+1. Validates the previous signed Beacon.
+2. Restricts changes to permitted descriptive fields.
+3. Constructs the next revision.
+4. Validates the unsigned successor.
+5. Requests an authorized signing operation.
+6. Verifies revision continuity before returning the signed Beacon.
+
+The signing helper:
+
+1. Validates the unsigned Beacon.
+2. Confirms the Beacon references the supplied Genesis Tag.
+3. Unlocks the encrypted Control File against Genesis.
+4. Signs the Beacon using the recovered Ed25519 controller key.
+5. Verifies the resulting signature and Genesis relationship.
+6. Returns only the signed Beacon.
+
+### Security Benefits
+
+This architecture reduces unnecessary exposure of decrypted private-key objects to higher-level application code.
+
+It also establishes a reusable internal boundary for future signing operations.
+
+### Current Limitations
+
+The signing helper operates within the same Node.js process.
+
+The recovered KeyObject remains usable until released by the runtime.
+
+JavaScript cannot guarantee immediate destruction of every internal copy of private-key material.
+
+The signing helper does not independently enforce the field-level update policy, predecessor continuity, publication freshness, or conflict resolution.
+
+Therefore, signAuthorizedBeacon() must remain an internal implementation helper rather than an unrestricted public management API.
+
+### Future Improvements
+
+- Short-lived isolated signing execution.
+- Additional key-lifetime controls.
+- Browser-specific secure signing.
+- Optional hardware-backed controllers.
+- Independent security review of the signing boundary.
+
+The higher-level authorized update operation remains responsible for enforcing revision and field-change policies.
+
+**Principle: Expose the authorized operation, not the decrypted controller key.**

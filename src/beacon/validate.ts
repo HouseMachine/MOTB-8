@@ -2,25 +2,50 @@
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 
-const schema = JSON.parse(
-  readFileSync(
-    new URL("../../schemas/beacon.schema.json", import.meta.url),
-    "utf8"
-  ).replace(/^\uFEFF/, "")
-) as object;
+function loadSchema(filename: string): object {
+  return JSON.parse(
+    readFileSync(
+      new URL(`../../schemas/${filename}`, import.meta.url),
+      "utf8"
+    ).replace(/^\uFEFF/, "")
+  ) as object;
+}
 
 const AjvConstructor = Ajv2020.default;
 const ajv = new AjvConstructor({ allErrors: true });
 addFormats.default(ajv);
 
-const validate = ajv.compile(schema);
+const validateV10 = ajv.compile(loadSchema("beacon.schema.json"));
+const validateV11 = ajv.compile(loadSchema("beacon-v1.1.schema.json"));
+
+function getValidator(record: unknown) {
+  if (
+    typeof record !== "object" ||
+    record === null ||
+    Array.isArray(record)
+  ) {
+    return null;
+  }
+
+  const version = (record as Record<string, unknown>).schemaVersion;
+
+  if (version === "1.0") return validateV10;
+  if (version === "1.1") return validateV11;
+
+  return null;
+}
 
 export function validateBeaconStructure(record: unknown): boolean {
-  return Boolean(validate(record));
+  const validator = getValidator(record);
+  return validator ? Boolean(validator(record)) : false;
 }
 
 export function validateUnsignedBeaconStructure(record: unknown): boolean {
-  if (typeof record !== "object" || record === null || Array.isArray(record)) {
+  if (
+    typeof record !== "object" ||
+    record === null ||
+    Array.isArray(record)
+  ) {
     return false;
   }
 
@@ -38,5 +63,5 @@ export function validateUnsignedBeaconStructure(record: unknown): boolean {
     }
   };
 
-  return Boolean(validate(candidate));
+  return validateBeaconStructure(candidate);
 }

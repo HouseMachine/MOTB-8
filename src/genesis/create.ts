@@ -1,4 +1,4 @@
-﻿import { sign, type KeyObject } from "node:crypto";
+import { sign, type KeyObject } from "node:crypto";
 import canonicalize from "canonicalize";
 import { parseMotb8Tag } from "../tag/parse.js";
 
@@ -26,7 +26,8 @@ export interface GenesisRecord {
 export function createGenesisRecord(
   motb8Tag: string,
   publicKeyJwk: GenesisRecord["controller"]["publicKeyJwk"],
-  privateKey: KeyObject
+  privateKey: KeyObject,
+  createdAt: string = new Date().toISOString()
 ): GenesisRecord {
   parseMotb8Tag(motb8Tag);
 
@@ -52,7 +53,7 @@ export function createGenesisRecord(
   const unsigned = {
     schemaVersion: "1.0" as const,
     motb8Tag,
-    createdAt: new Date().toISOString(),
+    createdAt,
     controller: {
       id: "#controller-1" as const,
       type: "Ed25519" as const,

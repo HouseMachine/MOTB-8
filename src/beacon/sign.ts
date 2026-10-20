@@ -1,15 +1,30 @@
-﻿import { sign, type KeyObject } from "node:crypto";
+import { sign, type KeyObject } from "node:crypto";
 import canonicalize from "canonicalize";
 import { parseMotb8Tag } from "../tag/parse.js";
 import type { MOTB8BeaconV01 } from "./types.js";
+import type { MOTB8BeaconV11 } from "./types-v1.1.js";
 import { validateUnsignedBeaconStructure } from "./validate.js";
 
-export type UnsignedBeacon = Omit<MOTB8BeaconV01, "proof">;
+export type SignedBeacon = MOTB8BeaconV01 | MOTB8BeaconV11;
+
+export type UnsignedBeacon =
+  | Omit<MOTB8BeaconV01, "proof">
+  | Omit<MOTB8BeaconV11, "proof">;
+
+export function signBeacon(
+  beacon: Omit<MOTB8BeaconV01, "proof">,
+  privateKey: KeyObject
+): MOTB8BeaconV01;
+
+export function signBeacon(
+  beacon: Omit<MOTB8BeaconV11, "proof">,
+  privateKey: KeyObject
+): MOTB8BeaconV11;
 
 export function signBeacon(
   beacon: UnsignedBeacon,
   privateKey: KeyObject
-): MOTB8BeaconV01 {
+): SignedBeacon {
   if (!validateUnsignedBeaconStructure(beacon)) {
     throw new Error("Invalid unsigned Beacon structure");
   }
