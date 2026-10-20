@@ -16,3 +16,30 @@ export type {
   GenesisVerificationStatus,
   GenesisVerificationResult
 } from "./genesis/verify.js";
+
+export { signBeacon } from "./beacon/sign.js";
+export { verifyBeacon } from "./beacon/verify.js";
+export {
+  validateBeaconStructure,
+  validateUnsignedBeaconStructure
+} from "./beacon/validate.js";
+
+export type { MOTB8BeaconV01 } from "./beacon/types.js";
+export type {
+  UnsignedBeacon
+} from "./beacon/sign.js";
+export type {
+  BeaconVerificationResult
+} from "./beacon/verify.js";
+
+export { encryptControlFile } from "./control/encrypt.js";
+export { decryptControlFile } from "./control/decrypt.js";
+export { unlockControlFile } from "./control/unlock.js";
+export { validateControlFileStructure } from "./control/validate.js";
+
+export type {
+  EncryptedControlFile
+} from "./control/encrypt.js";
+export type {
+  ControlFileMetadata
+} from "./control/aad.js";

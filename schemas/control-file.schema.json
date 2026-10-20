@@ -1,0 +1,52 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MOTB-8 Encrypted Control File v0.1",
+  "description": "Locally encrypted controller credentials for a permanent MOTB-8 identity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "version", "motb8Tag", "kdf", "encryption", "ciphertext"],
+  "properties": {
+    "format": { "const": "MOTB-8-CONTROL" },
+    "version": { "const": "1.0" },
+    "motb8Tag": {
+      "type": "string",
+      "pattern": "^\\(\\[\\[!MOTB-8:1:[0-9A-HJKMNP-TV-Z]{32}:[0-9A-HJKMNP-TV-Z]{2}\\]\\]\\)$"
+    },
+    "kdf": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "N", "r", "p", "salt"],
+      "properties": {
+        "algorithm": { "const": "scrypt" },
+        "N": { "const": 32768 },
+        "r": { "const": 8 },
+        "p": { "const": 1 },
+        "salt": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{22}$"
+        }
+      }
+    },
+    "encryption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "nonce", "authTag"],
+      "properties": {
+        "algorithm": { "const": "AES-256-GCM" },
+        "nonce": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{16}$"
+        },
+        "authTag": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{22}$"
+        }
+      }
+    },
+    "ciphertext": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_-]+$"
+    }
+  }
+}
