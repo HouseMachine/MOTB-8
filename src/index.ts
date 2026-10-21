@@ -132,3 +132,16 @@ export type {
 } from "./catalog/types.js";
 
 export type { BeaconAttachment } from "./attachment/types.js";
+
+/**
+ * Phase 23.9 — Protocols and Discovery Profiles
+ */
+
+export { createBeaconProtocol } from "./protocol/create.js";
+export { createBeaconProfiles } from "./profile/create.js";
+
+export type { BeaconProtocol } from "./protocol/types.js";
+export type {
+  BeaconProfiles,
+  BeaconProfileLink
+} from "./profile/types.js";
