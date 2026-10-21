@@ -115,3 +115,20 @@ export type {
   IndustryCategory,
   IndustrySubcategory
 } from "./vocabulary/industry.js";
+
+/**
+ * Phase 23.8 — Catalogs and Attachments
+ */
+
+export { createNativeCatalogEntry } from "./catalog/native.js";
+export { createExternalCatalogEntry } from "./catalog/external.js";
+export { createBeaconAttachment } from "./attachment/create.js";
+
+export type {
+  BeaconCatalogs,
+  NativeCatalogEntry,
+  ExternalCatalogEntry,
+  CatalogDirection
+} from "./catalog/types.js";
+
+export type { BeaconAttachment } from "./attachment/types.js";
