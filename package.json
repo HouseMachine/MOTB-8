@@ -46,5 +46,8 @@
     "README.md",
     "LICENSE",
     "vocabularies/"
-  ]
+  ],
+  "bin": {
+    "motb8": "./dist/cli/index.js"
+  }
 }
