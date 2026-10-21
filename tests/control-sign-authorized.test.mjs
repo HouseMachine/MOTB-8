@@ -1,10 +1,9 @@
-﻿import assert from "node:assert/strict";
+import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import { generateMotb8Tag } from "../dist/tag/generate.js";
 import { generateControllerKeyPair } from "../dist/genesis/controller.js";
 import { createGenesisRecord } from "../dist/genesis/create.js";
-import { signBeacon } from "../dist/beacon/sign.js";
 import { verifyBeacon } from "../dist/beacon/verify.js";
 import { generateDiscoverySummary } from "../dist/beacon/summary.js";
 import { encryptControlFile } from "../dist/control/encrypt.js";

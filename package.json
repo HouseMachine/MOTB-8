@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "npm run build && node --test tests/*.test.mjs",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint tests/**/*.mjs"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,10 @@
   },
   "homepage": "https://github.com/HouseMachine/MOTB-8#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^26.6.5",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
     "json-schema-to-typescript": "^16.0.0",
     "typescript": "^7.0.2"
   },
