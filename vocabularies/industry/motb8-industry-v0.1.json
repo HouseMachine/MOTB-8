@@ -1,0 +1,6148 @@
+{
+  "source": "Monet Service Catalog Taxonomy",
+  "sourceVersion": "1.0",
+  "status": "reference-candidate",
+  "domains": [
+    {
+      "code": "01",
+      "key": "agriculture-and-natural-resources",
+      "label": "Agriculture & Natural Resources",
+      "categories": [
+        {
+          "key": "agriculture",
+          "label": "Agriculture",
+          "subcategories": [
+            {
+              "key": "crops",
+              "label": "Crops"
+            },
+            {
+              "key": "agricultural-inputs",
+              "label": "Agricultural Inputs"
+            },
+            {
+              "key": "agricultural-production",
+              "label": "Agricultural Production"
+            },
+            {
+              "key": "precision-agriculture",
+              "label": "Precision Agriculture"
+            },
+            {
+              "key": "agricultural-technology",
+              "label": "Agricultural Technology"
+            },
+            {
+              "key": "agricultural-services",
+              "label": "Agricultural Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "forestry",
+          "label": "Forestry",
+          "subcategories": [
+            {
+              "key": "timber",
+              "label": "Timber"
+            },
+            {
+              "key": "forest-products",
+              "label": "Forest Products"
+            },
+            {
+              "key": "forest-management",
+              "label": "Forest Management"
+            },
+            {
+              "key": "forest-monitoring",
+              "label": "Forest Monitoring"
+            },
+            {
+              "key": "forestry-services",
+              "label": "Forestry Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "fisheries-and-aquaculture",
+          "label": "Fisheries & Aquaculture",
+          "subcategories": [
+            {
+              "key": "wild-fisheries",
+              "label": "Wild Fisheries"
+            },
+            {
+              "key": "aquaculture",
+              "label": "Aquaculture"
+            },
+            {
+              "key": "seafood-production",
+              "label": "Seafood Production"
+            },
+            {
+              "key": "aquatic-monitoring",
+              "label": "Aquatic Monitoring"
+            },
+            {
+              "key": "fisheries-services",
+              "label": "Fisheries Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "livestock-and-animal-products",
+          "label": "Livestock & Animal Products",
+          "subcategories": [
+            {
+              "key": "livestock",
+              "label": "Livestock"
+            },
+            {
+              "key": "animal-products",
+              "label": "Animal Products"
+            },
+            {
+              "key": "feed-and-nutrition",
+              "label": "Feed & Nutrition"
+            },
+            {
+              "key": "breeding",
+              "label": "Breeding"
+            },
+            {
+              "key": "livestock-monitoring",
+              "label": "Livestock Monitoring"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "plants-and-horticulture",
+          "label": "Plants & Horticulture",
+          "subcategories": [
+            {
+              "key": "plants",
+              "label": "Plants"
+            },
+            {
+              "key": "seeds",
+              "label": "Seeds"
+            },
+            {
+              "key": "nursery-products",
+              "label": "Nursery Products"
+            },
+            {
+              "key": "horticultural-products",
+              "label": "Horticultural Products"
+            },
+            {
+              "key": "horticultural-services",
+              "label": "Horticultural Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "natural-resource-services",
+          "label": "Natural Resource Services",
+          "subcategories": [
+            {
+              "key": "resource-assessment",
+              "label": "Resource Assessment"
+            },
+            {
+              "key": "resource-monitoring",
+              "label": "Resource Monitoring"
+            },
+            {
+              "key": "resource-management",
+              "label": "Resource Management"
+            },
+            {
+              "key": "resource-mapping",
+              "label": "Resource Mapping"
+            },
+            {
+              "key": "resource-development",
+              "label": "Resource Development"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "02",
+      "key": "mining-minerals-and-materials",
+      "label": "Mining, Minerals & Materials",
+      "categories": [
+        {
+          "key": "mining-and-extraction",
+          "label": "Mining & Extraction",
+          "subcategories": [
+            {
+              "key": "exploration",
+              "label": "Exploration"
+            },
+            {
+              "key": "prospecting",
+              "label": "Prospecting"
+            },
+            {
+              "key": "extraction",
+              "label": "Extraction"
+            },
+            {
+              "key": "sampling-and-assaying",
+              "label": "Sampling & Assaying"
+            },
+            {
+              "key": "mine-development",
+              "label": "Mine Development"
+            },
+            {
+              "key": "mining-operations",
+              "label": "Mining Operations"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "minerals-and-ores",
+          "label": "Minerals & Ores",
+          "subcategories": [
+            {
+              "key": "precious-metal-ores",
+              "label": "Precious-Metal Ores"
+            },
+            {
+              "key": "base-metal-ores",
+              "label": "Base-Metal Ores"
+            },
+            {
+              "key": "critical-mineral-ores",
+              "label": "Critical-Mineral Ores"
+            },
+            {
+              "key": "industrial-minerals",
+              "label": "Industrial Minerals"
+            },
+            {
+              "key": "mineral-concentrates",
+              "label": "Mineral Concentrates"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "metals",
+          "label": "Metals",
+          "subcategories": [
+            {
+              "key": "precious-metals",
+              "label": "Precious Metals"
+            },
+            {
+              "key": "base-metals",
+              "label": "Base Metals"
+            },
+            {
+              "key": "critical-metals",
+              "label": "Critical Metals"
+            },
+            {
+              "key": "ferrous-metals",
+              "label": "Ferrous Metals"
+            },
+            {
+              "key": "nonferrous-metals",
+              "label": "Nonferrous Metals"
+            },
+            {
+              "key": "refined-metals",
+              "label": "Refined Metals"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "stone-and-aggregates",
+          "label": "Stone & Aggregates",
+          "subcategories": [
+            {
+              "key": "stone",
+              "label": "Stone"
+            },
+            {
+              "key": "sand",
+              "label": "Sand"
+            },
+            {
+              "key": "gravel",
+              "label": "Gravel"
+            },
+            {
+              "key": "aggregate",
+              "label": "Aggregate"
+            },
+            {
+              "key": "dimension-stone",
+              "label": "Dimension Stone"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "raw-materials",
+          "label": "Raw Materials",
+          "subcategories": [
+            {
+              "key": "bulk-raw-materials",
+              "label": "Bulk Raw Materials"
+            },
+            {
+              "key": "processed-raw-materials",
+              "label": "Processed Raw Materials"
+            },
+            {
+              "key": "recycled-materials",
+              "label": "Recycled Materials"
+            },
+            {
+              "key": "feedstocks",
+              "label": "Feedstocks"
+            },
+            {
+              "key": "specialty-raw-materials",
+              "label": "Specialty Raw Materials"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "mining-services",
+          "label": "Mining Services",
+          "subcategories": [
+            {
+              "key": "geological-services",
+              "label": "Geological Services"
+            },
+            {
+              "key": "mineral-evaluation",
+              "label": "Mineral Evaluation"
+            },
+            {
+              "key": "assaying",
+              "label": "Assaying"
+            },
+            {
+              "key": "mine-planning",
+              "label": "Mine Planning"
+            },
+            {
+              "key": "mining-support",
+              "label": "Mining Support"
+            },
+            {
+              "key": "mineral-processing",
+              "label": "Mineral Processing"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "03",
+      "key": "chemicals-and-advanced-materials",
+      "label": "Chemicals & Advanced Materials",
+      "categories": [
+        {
+          "key": "industrial-chemicals",
+          "label": "Industrial Chemicals",
+          "subcategories": [
+            {
+              "key": "acids-and-bases",
+              "label": "Acids & Bases"
+            },
+            {
+              "key": "solvents",
+              "label": "Solvents"
+            },
+            {
+              "key": "process-chemicals",
+              "label": "Process Chemicals"
+            },
+            {
+              "key": "reagents",
+              "label": "Reagents"
+            },
+            {
+              "key": "commodity-chemicals",
+              "label": "Commodity Chemicals"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "specialty-chemicals",
+          "label": "Specialty Chemicals",
+          "subcategories": [
+            {
+              "key": "coatings",
+              "label": "Coatings"
+            },
+            {
+              "key": "adhesives",
+              "label": "Adhesives"
+            },
+            {
+              "key": "catalysts",
+              "label": "Catalysts"
+            },
+            {
+              "key": "additives",
+              "label": "Additives"
+            },
+            {
+              "key": "specialty-formulations",
+              "label": "Specialty Formulations"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "gases",
+          "label": "Gases",
+          "subcategories": [
+            {
+              "key": "industrial-gases",
+              "label": "Industrial Gases"
+            },
+            {
+              "key": "specialty-gases",
+              "label": "Specialty Gases"
+            },
+            {
+              "key": "process-gases",
+              "label": "Process Gases"
+            },
+            {
+              "key": "compressed-gases",
+              "label": "Compressed Gases"
+            },
+            {
+              "key": "gas-services",
+              "label": "Gas Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "polymers-and-resins",
+          "label": "Polymers & Resins",
+          "subcategories": [
+            {
+              "key": "thermoplastics",
+              "label": "Thermoplastics"
+            },
+            {
+              "key": "thermosets",
+              "label": "Thermosets"
+            },
+            {
+              "key": "elastomers",
+              "label": "Elastomers"
+            },
+            {
+              "key": "resins",
+              "label": "Resins"
+            },
+            {
+              "key": "polymer-feedstocks",
+              "label": "Polymer Feedstocks"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "composites-and-advanced-materials",
+          "label": "Composites & Advanced Materials",
+          "subcategories": [
+            {
+              "key": "composite-materials",
+              "label": "Composite Materials"
+            },
+            {
+              "key": "ceramics",
+              "label": "Ceramics"
+            },
+            {
+              "key": "nanomaterials",
+              "label": "Nanomaterials"
+            },
+            {
+              "key": "smart-materials",
+              "label": "Smart Materials"
+            },
+            {
+              "key": "high-performance-materials",
+              "label": "High-Performance Materials"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "biochemicals",
+          "label": "Biochemicals",
+          "subcategories": [
+            {
+              "key": "enzymes",
+              "label": "Enzymes"
+            },
+            {
+              "key": "biomaterials",
+              "label": "Biomaterials"
+            },
+            {
+              "key": "bio-based-chemicals",
+              "label": "Bio-Based Chemicals"
+            },
+            {
+              "key": "fermentation-products",
+              "label": "Fermentation Products"
+            },
+            {
+              "key": "biochemical-reagents",
+              "label": "Biochemical Reagents"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "04",
+      "key": "energy-and-power",
+      "label": "Energy & Power",
+      "categories": [
+        {
+          "key": "electricity",
+          "label": "Electricity",
+          "subcategories": [
+            {
+              "key": "grid-electricity",
+              "label": "Grid Electricity"
+            },
+            {
+              "key": "distributed-electricity",
+              "label": "Distributed Electricity"
+            },
+            {
+              "key": "renewable-electricity",
+              "label": "Renewable Electricity"
+            },
+            {
+              "key": "backup-power",
+              "label": "Backup Power"
+            },
+            {
+              "key": "machine-power-supply",
+              "label": "Machine Power Supply"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "fuels",
+          "label": "Fuels",
+          "subcategories": [
+            {
+              "key": "petroleum-fuels",
+              "label": "Petroleum Fuels"
+            },
+            {
+              "key": "natural-gas",
+              "label": "Natural Gas"
+            },
+            {
+              "key": "hydrogen",
+              "label": "Hydrogen"
+            },
+            {
+              "key": "biofuels",
+              "label": "Biofuels"
+            },
+            {
+              "key": "synthetic-fuels",
+              "label": "Synthetic Fuels"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "renewable-energy",
+          "label": "Renewable Energy",
+          "subcategories": [
+            {
+              "key": "solar",
+              "label": "Solar"
+            },
+            {
+              "key": "wind",
+              "label": "Wind"
+            },
+            {
+              "key": "hydroelectric",
+              "label": "Hydroelectric"
+            },
+            {
+              "key": "geothermal",
+              "label": "Geothermal"
+            },
+            {
+              "key": "biomass",
+              "label": "Biomass"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "energy-storage",
+          "label": "Energy Storage",
+          "subcategories": [
+            {
+              "key": "batteries",
+              "label": "Batteries"
+            },
+            {
+              "key": "grid-storage",
+              "label": "Grid Storage"
+            },
+            {
+              "key": "thermal-storage",
+              "label": "Thermal Storage"
+            },
+            {
+              "key": "mechanical-storage",
+              "label": "Mechanical Storage"
+            },
+            {
+              "key": "distributed-storage",
+              "label": "Distributed Storage"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "power-systems",
+          "label": "Power Systems",
+          "subcategories": [
+            {
+              "key": "generation-equipment",
+              "label": "Generation Equipment"
+            },
+            {
+              "key": "power-conversion",
+              "label": "Power Conversion"
+            },
+            {
+              "key": "distribution-equipment",
+              "label": "Distribution Equipment"
+            },
+            {
+              "key": "power-control",
+              "label": "Power Control"
+            },
+            {
+              "key": "microgrids",
+              "label": "Microgrids"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "energy-services",
+          "label": "Energy Services",
+          "subcategories": [
+            {
+              "key": "energy-management",
+              "label": "Energy Management"
+            },
+            {
+              "key": "energy-monitoring",
+              "label": "Energy Monitoring"
+            },
+            {
+              "key": "demand-response",
+              "label": "Demand Response"
+            },
+            {
+              "key": "energy-optimization",
+              "label": "Energy Optimization"
+            },
+            {
+              "key": "energy-trading-support",
+              "label": "Energy Trading Support"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "05",
+      "key": "industrial-and-manufacturing",
+      "label": "Industrial & Manufacturing",
+      "categories": [
+        {
+          "key": "manufacturing-services",
+          "label": "Manufacturing Services",
+          "subcategories": [
+            {
+              "key": "contract-manufacturing",
+              "label": "Contract Manufacturing"
+            },
+            {
+              "key": "additive-manufacturing",
+              "label": "Additive Manufacturing"
+            },
+            {
+              "key": "machining",
+              "label": "Machining"
+            },
+            {
+              "key": "forming",
+              "label": "Forming"
+            },
+            {
+              "key": "processing",
+              "label": "Processing"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "industrial-machinery",
+          "label": "Industrial Machinery",
+          "subcategories": [
+            {
+              "key": "production-machinery",
+              "label": "Production Machinery"
+            },
+            {
+              "key": "material-handling-machinery",
+              "label": "Material-Handling Machinery"
+            },
+            {
+              "key": "mining-machinery",
+              "label": "Mining Machinery"
+            },
+            {
+              "key": "agricultural-machinery",
+              "label": "Agricultural Machinery"
+            },
+            {
+              "key": "specialized-machinery",
+              "label": "Specialized Machinery"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "production-equipment",
+          "label": "Production Equipment",
+          "subcategories": [
+            {
+              "key": "assembly-equipment",
+              "label": "Assembly Equipment"
+            },
+            {
+              "key": "packaging-equipment",
+              "label": "Packaging Equipment"
+            },
+            {
+              "key": "processing-equipment",
+              "label": "Processing Equipment"
+            },
+            {
+              "key": "inspection-equipment",
+              "label": "Inspection Equipment"
+            },
+            {
+              "key": "production-tooling",
+              "label": "Production Tooling"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "components-and-parts",
+          "label": "Components & Parts",
+          "subcategories": [
+            {
+              "key": "mechanical-components",
+              "label": "Mechanical Components"
+            },
+            {
+              "key": "electrical-components",
+              "label": "Electrical Components"
+            },
+            {
+              "key": "structural-components",
+              "label": "Structural Components"
+            },
+            {
+              "key": "replacement-parts",
+              "label": "Replacement Parts"
+            },
+            {
+              "key": "custom-components",
+              "label": "Custom Components"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "process-equipment",
+          "label": "Process Equipment",
+          "subcategories": [
+            {
+              "key": "pumps",
+              "label": "Pumps"
+            },
+            {
+              "key": "valves",
+              "label": "Valves"
+            },
+            {
+              "key": "compressors",
+              "label": "Compressors"
+            },
+            {
+              "key": "conveyance",
+              "label": "Conveyance"
+            },
+            {
+              "key": "thermal-equipment",
+              "label": "Thermal Equipment"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "fabrication-and-assembly",
+          "label": "Fabrication & Assembly",
+          "subcategories": [
+            {
+              "key": "metal-fabrication",
+              "label": "Metal Fabrication"
+            },
+            {
+              "key": "plastic-fabrication",
+              "label": "Plastic Fabrication"
+            },
+            {
+              "key": "electronic-assembly",
+              "label": "Electronic Assembly"
+            },
+            {
+              "key": "mechanical-assembly",
+              "label": "Mechanical Assembly"
+            },
+            {
+              "key": "custom-fabrication",
+              "label": "Custom Fabrication"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "06",
+      "key": "construction-and-infrastructure",
+      "label": "Construction & Infrastructure",
+      "categories": [
+        {
+          "key": "construction-services",
+          "label": "Construction Services",
+          "subcategories": [
+            {
+              "key": "building-construction",
+              "label": "Building Construction"
+            },
+            {
+              "key": "civil-construction",
+              "label": "Civil Construction"
+            },
+            {
+              "key": "specialty-trades",
+              "label": "Specialty Trades"
+            },
+            {
+              "key": "installation",
+              "label": "Installation"
+            },
+            {
+              "key": "renovation",
+              "label": "Renovation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "building-materials",
+          "label": "Building Materials",
+          "subcategories": [
+            {
+              "key": "structural-materials",
+              "label": "Structural Materials"
+            },
+            {
+              "key": "concrete-and-masonry",
+              "label": "Concrete & Masonry"
+            },
+            {
+              "key": "lumber",
+              "label": "Lumber"
+            },
+            {
+              "key": "roofing",
+              "label": "Roofing"
+            },
+            {
+              "key": "insulation",
+              "label": "Insulation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "civil-infrastructure",
+          "label": "Civil Infrastructure",
+          "subcategories": [
+            {
+              "key": "roads",
+              "label": "Roads"
+            },
+            {
+              "key": "bridges",
+              "label": "Bridges"
+            },
+            {
+              "key": "rail-infrastructure",
+              "label": "Rail Infrastructure"
+            },
+            {
+              "key": "water-infrastructure",
+              "label": "Water Infrastructure"
+            },
+            {
+              "key": "utility-infrastructure",
+              "label": "Utility Infrastructure"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "construction-equipment",
+          "label": "Construction Equipment",
+          "subcategories": [
+            {
+              "key": "earthmoving",
+              "label": "Earthmoving"
+            },
+            {
+              "key": "lifting",
+              "label": "Lifting"
+            },
+            {
+              "key": "concrete-equipment",
+              "label": "Concrete Equipment"
+            },
+            {
+              "key": "site-equipment",
+              "label": "Site Equipment"
+            },
+            {
+              "key": "construction-robotics",
+              "label": "Construction Robotics"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "engineering-and-design",
+          "label": "Engineering & Design",
+          "subcategories": [
+            {
+              "key": "civil-engineering",
+              "label": "Civil Engineering"
+            },
+            {
+              "key": "structural-engineering",
+              "label": "Structural Engineering"
+            },
+            {
+              "key": "architectural-design",
+              "label": "Architectural Design"
+            },
+            {
+              "key": "infrastructure-design",
+              "label": "Infrastructure Design"
+            },
+            {
+              "key": "digital-engineering",
+              "label": "Digital Engineering"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "infrastructure-management",
+          "label": "Infrastructure Management",
+          "subcategories": [
+            {
+              "key": "inspection",
+              "label": "Inspection"
+            },
+            {
+              "key": "asset-monitoring",
+              "label": "Asset Monitoring"
+            },
+            {
+              "key": "infrastructure-analytics",
+              "label": "Infrastructure Analytics"
+            },
+            {
+              "key": "lifecycle-management",
+              "label": "Lifecycle Management"
+            },
+            {
+              "key": "infrastructure-operations",
+              "label": "Infrastructure Operations"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "07",
+      "key": "transportation-and-logistics",
+      "label": "Transportation & Logistics",
+      "categories": [
+        {
+          "key": "transportation-services",
+          "label": "Transportation Services",
+          "subcategories": [
+            {
+              "key": "ground",
+              "label": "Ground"
+            },
+            {
+              "key": "rail",
+              "label": "Rail"
+            },
+            {
+              "key": "air",
+              "label": "Air"
+            },
+            {
+              "key": "marine",
+              "label": "Marine"
+            },
+            {
+              "key": "autonomous-transportation",
+              "label": "Autonomous Transportation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "freight-and-shipping",
+          "label": "Freight & Shipping",
+          "subcategories": [
+            {
+              "key": "freight-transport",
+              "label": "Freight Transport"
+            },
+            {
+              "key": "parcel-shipping",
+              "label": "Parcel Shipping"
+            },
+            {
+              "key": "bulk-shipping",
+              "label": "Bulk Shipping"
+            },
+            {
+              "key": "specialized-freight",
+              "label": "Specialized Freight"
+            },
+            {
+              "key": "machine-requested-freight",
+              "label": "Machine-Requested Freight"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "vehicles-and-mobility",
+          "label": "Vehicles & Mobility",
+          "subcategories": [
+            {
+              "key": "road-vehicles",
+              "label": "Road Vehicles"
+            },
+            {
+              "key": "commercial-vehicles",
+              "label": "Commercial Vehicles"
+            },
+            {
+              "key": "aircraft",
+              "label": "Aircraft"
+            },
+            {
+              "key": "marine-vehicles",
+              "label": "Marine Vehicles"
+            },
+            {
+              "key": "autonomous-vehicles",
+              "label": "Autonomous Vehicles"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "warehousing-and-storage",
+          "label": "Warehousing & Storage",
+          "subcategories": [
+            {
+              "key": "general-warehousing",
+              "label": "General Warehousing"
+            },
+            {
+              "key": "cold-storage",
+              "label": "Cold Storage"
+            },
+            {
+              "key": "secure-storage",
+              "label": "Secure Storage"
+            },
+            {
+              "key": "automated-warehousing",
+              "label": "Automated Warehousing"
+            },
+            {
+              "key": "inventory-storage",
+              "label": "Inventory Storage"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "delivery-and-fulfillment",
+          "label": "Delivery & Fulfillment",
+          "subcategories": [
+            {
+              "key": "last-mile-delivery",
+              "label": "Last-Mile Delivery"
+            },
+            {
+              "key": "order-fulfillment",
+              "label": "Order Fulfillment"
+            },
+            {
+              "key": "autonomous-delivery",
+              "label": "Autonomous Delivery"
+            },
+            {
+              "key": "pickup-services",
+              "label": "Pickup Services"
+            },
+            {
+              "key": "distribution",
+              "label": "Distribution"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "logistics-management",
+          "label": "Logistics Management",
+          "subcategories": [
+            {
+              "key": "routing",
+              "label": "Routing"
+            },
+            {
+              "key": "fleet-management",
+              "label": "Fleet Management"
+            },
+            {
+              "key": "shipment-tracking",
+              "label": "Shipment Tracking"
+            },
+            {
+              "key": "supply-chain-optimization",
+              "label": "Supply-Chain Optimization"
+            },
+            {
+              "key": "autonomous-logistics",
+              "label": "Autonomous Logistics"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "08",
+      "key": "electronics-and-hardware",
+      "label": "Electronics & Hardware",
+      "categories": [
+        {
+          "key": "computing-hardware",
+          "label": "Computing Hardware",
+          "subcategories": [
+            {
+              "key": "servers",
+              "label": "Servers"
+            },
+            {
+              "key": "workstations",
+              "label": "Workstations"
+            },
+            {
+              "key": "embedded-computers",
+              "label": "Embedded Computers"
+            },
+            {
+              "key": "accelerators",
+              "label": "Accelerators"
+            },
+            {
+              "key": "edge-hardware",
+              "label": "Edge Hardware"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "electronic-components",
+          "label": "Electronic Components",
+          "subcategories": [
+            {
+              "key": "semiconductors",
+              "label": "Semiconductors"
+            },
+            {
+              "key": "circuit-components",
+              "label": "Circuit Components"
+            },
+            {
+              "key": "boards-and-modules",
+              "label": "Boards & Modules"
+            },
+            {
+              "key": "power-electronics",
+              "label": "Power Electronics"
+            },
+            {
+              "key": "connectors",
+              "label": "Connectors"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "sensors-and-instrumentation",
+          "label": "Sensors & Instrumentation",
+          "subcategories": [
+            {
+              "key": "environmental-sensors",
+              "label": "Environmental Sensors"
+            },
+            {
+              "key": "industrial-sensors",
+              "label": "Industrial Sensors"
+            },
+            {
+              "key": "positioning-sensors",
+              "label": "Positioning Sensors"
+            },
+            {
+              "key": "measurement-instruments",
+              "label": "Measurement Instruments"
+            },
+            {
+              "key": "machine-sensors",
+              "label": "Machine Sensors"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "robotics-hardware",
+          "label": "Robotics Hardware",
+          "subcategories": [
+            {
+              "key": "industrial-robots",
+              "label": "Industrial Robots"
+            },
+            {
+              "key": "mobile-robots",
+              "label": "Mobile Robots"
+            },
+            {
+              "key": "manipulators",
+              "label": "Manipulators"
+            },
+            {
+              "key": "drones",
+              "label": "Drones"
+            },
+            {
+              "key": "autonomous-hardware",
+              "label": "Autonomous Hardware"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "control-systems",
+          "label": "Control Systems",
+          "subcategories": [
+            {
+              "key": "controllers",
+              "label": "Controllers"
+            },
+            {
+              "key": "plcs",
+              "label": "PLCs"
+            },
+            {
+              "key": "embedded-control",
+              "label": "Embedded Control"
+            },
+            {
+              "key": "motion-control",
+              "label": "Motion Control"
+            },
+            {
+              "key": "autonomous-control",
+              "label": "Autonomous Control"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "peripheral-and-interface-hardware",
+          "label": "Peripheral & Interface Hardware",
+          "subcategories": [
+            {
+              "key": "displays",
+              "label": "Displays"
+            },
+            {
+              "key": "input-devices",
+              "label": "Input Devices"
+            },
+            {
+              "key": "machine-interfaces",
+              "label": "Machine Interfaces"
+            },
+            {
+              "key": "communications-interfaces",
+              "label": "Communications Interfaces"
+            },
+            {
+              "key": "peripheral-devices",
+              "label": "Peripheral Devices"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "09",
+      "key": "computing-and-digital-infrastructure",
+      "label": "Computing & Digital Infrastructure",
+      "categories": [
+        {
+          "key": "compute",
+          "label": "Compute",
+          "subcategories": [
+            {
+              "key": "cpu-compute",
+              "label": "CPU Compute"
+            },
+            {
+              "key": "gpu-compute",
+              "label": "GPU Compute"
+            },
+            {
+              "key": "accelerated-compute",
+              "label": "Accelerated Compute"
+            },
+            {
+              "key": "edge-compute",
+              "label": "Edge Compute"
+            },
+            {
+              "key": "distributed-compute",
+              "label": "Distributed Compute"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "cloud-infrastructure",
+          "label": "Cloud Infrastructure",
+          "subcategories": [
+            {
+              "key": "virtual-machines",
+              "label": "Virtual Machines"
+            },
+            {
+              "key": "containers",
+              "label": "Containers"
+            },
+            {
+              "key": "serverless-infrastructure",
+              "label": "Serverless Infrastructure"
+            },
+            {
+              "key": "private-cloud",
+              "label": "Private Cloud"
+            },
+            {
+              "key": "hybrid-cloud",
+              "label": "Hybrid Cloud"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "digital-storage",
+          "label": "Digital Storage",
+          "subcategories": [
+            {
+              "key": "object-storage",
+              "label": "Object Storage"
+            },
+            {
+              "key": "block-storage",
+              "label": "Block Storage"
+            },
+            {
+              "key": "file-storage",
+              "label": "File Storage"
+            },
+            {
+              "key": "archival-storage",
+              "label": "Archival Storage"
+            },
+            {
+              "key": "distributed-storage",
+              "label": "Distributed Storage"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "hosting",
+          "label": "Hosting",
+          "subcategories": [
+            {
+              "key": "application-hosting",
+              "label": "Application Hosting"
+            },
+            {
+              "key": "api-hosting",
+              "label": "API Hosting"
+            },
+            {
+              "key": "model-hosting",
+              "label": "Model Hosting"
+            },
+            {
+              "key": "database-hosting",
+              "label": "Database Hosting"
+            },
+            {
+              "key": "machine-hosting",
+              "label": "Machine Hosting"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "network-infrastructure",
+          "label": "Network Infrastructure",
+          "subcategories": [
+            {
+              "key": "routing-infrastructure",
+              "label": "Routing Infrastructure"
+            },
+            {
+              "key": "network-nodes",
+              "label": "Network Nodes"
+            },
+            {
+              "key": "load-balancing",
+              "label": "Load Balancing"
+            },
+            {
+              "key": "network-management",
+              "label": "Network Management"
+            },
+            {
+              "key": "edge-networking",
+              "label": "Edge Networking"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "distributed-infrastructure",
+          "label": "Distributed Infrastructure",
+          "subcategories": [
+            {
+              "key": "distributed-computing",
+              "label": "Distributed Computing"
+            },
+            {
+              "key": "decentralized-infrastructure",
+              "label": "Decentralized Infrastructure"
+            },
+            {
+              "key": "distributed-storage",
+              "label": "Distributed Storage"
+            },
+            {
+              "key": "node-infrastructure",
+              "label": "Node Infrastructure"
+            },
+            {
+              "key": "federated-infrastructure",
+              "label": "Federated Infrastructure"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "10",
+      "key": "software-and-applications",
+      "label": "Software & Applications",
+      "categories": [
+        {
+          "key": "applications",
+          "label": "Applications",
+          "subcategories": [
+            {
+              "key": "business-applications",
+              "label": "Business Applications"
+            },
+            {
+              "key": "technical-applications",
+              "label": "Technical Applications"
+            },
+            {
+              "key": "machine-applications",
+              "label": "Machine Applications"
+            },
+            {
+              "key": "consumer-applications",
+              "label": "Consumer Applications"
+            },
+            {
+              "key": "specialized-applications",
+              "label": "Specialized Applications"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "platforms",
+          "label": "Platforms",
+          "subcategories": [
+            {
+              "key": "application-platforms",
+              "label": "Application Platforms"
+            },
+            {
+              "key": "data-platforms",
+              "label": "Data Platforms"
+            },
+            {
+              "key": "ai-platforms",
+              "label": "AI Platforms"
+            },
+            {
+              "key": "commerce-platforms",
+              "label": "Commerce Platforms"
+            },
+            {
+              "key": "machine-platforms",
+              "label": "Machine Platforms"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "developer-tools",
+          "label": "Developer Tools",
+          "subcategories": [
+            {
+              "key": "sdks",
+              "label": "SDKs"
+            },
+            {
+              "key": "development-frameworks",
+              "label": "Development Frameworks"
+            },
+            {
+              "key": "testing-tools",
+              "label": "Testing Tools"
+            },
+            {
+              "key": "deployment-tools",
+              "label": "Deployment Tools"
+            },
+            {
+              "key": "machine-development-tools",
+              "label": "Machine Development Tools"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "apis-and-software-interfaces",
+          "label": "APIs & Software Interfaces",
+          "subcategories": [
+            {
+              "key": "data-apis",
+              "label": "Data APIs"
+            },
+            {
+              "key": "transaction-apis",
+              "label": "Transaction APIs"
+            },
+            {
+              "key": "control-apis",
+              "label": "Control APIs"
+            },
+            {
+              "key": "integration-apis",
+              "label": "Integration APIs"
+            },
+            {
+              "key": "machine-to-machine-apis",
+              "label": "Machine-to-Machine APIs"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "operating-system-software",
+          "label": "Operating/System Software",
+          "subcategories": [
+            {
+              "key": "operating-systems",
+              "label": "Operating Systems"
+            },
+            {
+              "key": "runtime-systems",
+              "label": "Runtime Systems"
+            },
+            {
+              "key": "middleware",
+              "label": "Middleware"
+            },
+            {
+              "key": "firmware",
+              "label": "Firmware"
+            },
+            {
+              "key": "machine-runtime-software",
+              "label": "Machine Runtime Software"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "enterprise-software",
+          "label": "Enterprise Software",
+          "subcategories": [
+            {
+              "key": "erp",
+              "label": "ERP"
+            },
+            {
+              "key": "crm",
+              "label": "CRM"
+            },
+            {
+              "key": "asset-management",
+              "label": "Asset Management"
+            },
+            {
+              "key": "operations-software",
+              "label": "Operations Software"
+            },
+            {
+              "key": "enterprise-automation",
+              "label": "Enterprise Automation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "11",
+      "key": "data-and-information",
+      "label": "Data & Information",
+      "categories": [
+        {
+          "key": "datasets",
+          "label": "Datasets",
+          "subcategories": [
+            {
+              "key": "historical-data",
+              "label": "Historical Data"
+            },
+            {
+              "key": "real-time-data",
+              "label": "Real-Time Data"
+            },
+            {
+              "key": "training-data",
+              "label": "Training Data"
+            },
+            {
+              "key": "reference-data",
+              "label": "Reference Data"
+            },
+            {
+              "key": "synthetic-data",
+              "label": "Synthetic Data"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "data-feeds",
+          "label": "Data Feeds",
+          "subcategories": [
+            {
+              "key": "market-feeds",
+              "label": "Market Feeds"
+            },
+            {
+              "key": "economic-feeds",
+              "label": "Economic Feeds"
+            },
+            {
+              "key": "sensor-feeds",
+              "label": "Sensor Feeds"
+            },
+            {
+              "key": "event-feeds",
+              "label": "Event Feeds"
+            },
+            {
+              "key": "machine-state-feeds",
+              "label": "Machine-State Feeds"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "telemetry",
+          "label": "Telemetry",
+          "subcategories": [
+            {
+              "key": "machine-telemetry",
+              "label": "Machine Telemetry"
+            },
+            {
+              "key": "network-telemetry",
+              "label": "Network Telemetry"
+            },
+            {
+              "key": "operational-telemetry",
+              "label": "Operational Telemetry"
+            },
+            {
+              "key": "environmental-telemetry",
+              "label": "Environmental Telemetry"
+            },
+            {
+              "key": "economic-telemetry",
+              "label": "Economic Telemetry"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "reference-information",
+          "label": "Reference Information",
+          "subcategories": [
+            {
+              "key": "directory-data",
+              "label": "Directory Data"
+            },
+            {
+              "key": "identity-reference-data",
+              "label": "Identity Reference Data"
+            },
+            {
+              "key": "technical-reference-data",
+              "label": "Technical Reference Data"
+            },
+            {
+              "key": "geographic-data",
+              "label": "Geographic Data"
+            },
+            {
+              "key": "catalog-data",
+              "label": "Catalog Data"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "data-processing",
+          "label": "Data Processing",
+          "subcategories": [
+            {
+              "key": "transformation",
+              "label": "Transformation"
+            },
+            {
+              "key": "normalization",
+              "label": "Normalization"
+            },
+            {
+              "key": "enrichment",
+              "label": "Enrichment"
+            },
+            {
+              "key": "aggregation",
+              "label": "Aggregation"
+            },
+            {
+              "key": "validation",
+              "label": "Validation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "data-management",
+          "label": "Data Management",
+          "subcategories": [
+            {
+              "key": "data-storage-management",
+              "label": "Data Storage Management"
+            },
+            {
+              "key": "data-governance",
+              "label": "Data Governance"
+            },
+            {
+              "key": "data-cataloging",
+              "label": "Data Cataloging"
+            },
+            {
+              "key": "data-synchronization",
+              "label": "Data Synchronization"
+            },
+            {
+              "key": "data-lifecycle",
+              "label": "Data Lifecycle"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "12",
+      "key": "artificial-intelligence-and-machine-intelligence",
+      "label": "Artificial Intelligence & Machine Intelligence",
+      "categories": [
+        {
+          "key": "ai-models",
+          "label": "AI Models",
+          "subcategories": [
+            {
+              "key": "foundation-models",
+              "label": "Foundation Models"
+            },
+            {
+              "key": "specialized-models",
+              "label": "Specialized Models"
+            },
+            {
+              "key": "predictive-models",
+              "label": "Predictive Models"
+            },
+            {
+              "key": "multimodal-models",
+              "label": "Multimodal Models"
+            },
+            {
+              "key": "machine-economy-models",
+              "label": "Machine-Economy Models"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "ai-inference",
+          "label": "AI Inference",
+          "subcategories": [
+            {
+              "key": "text-inference",
+              "label": "Text Inference"
+            },
+            {
+              "key": "vision-inference",
+              "label": "Vision Inference"
+            },
+            {
+              "key": "audio-inference",
+              "label": "Audio Inference"
+            },
+            {
+              "key": "multimodal-inference",
+              "label": "Multimodal Inference"
+            },
+            {
+              "key": "specialized-inference",
+              "label": "Specialized Inference"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "machine-learning",
+          "label": "Machine Learning",
+          "subcategories": [
+            {
+              "key": "training",
+              "label": "Training"
+            },
+            {
+              "key": "fine-tuning",
+              "label": "Fine-Tuning"
+            },
+            {
+              "key": "feature-engineering",
+              "label": "Feature Engineering"
+            },
+            {
+              "key": "model-evaluation",
+              "label": "Model Evaluation"
+            },
+            {
+              "key": "ml-operations",
+              "label": "ML Operations"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "autonomous-agents",
+          "label": "Autonomous Agents",
+          "subcategories": [
+            {
+              "key": "task-agents",
+              "label": "Task Agents"
+            },
+            {
+              "key": "economic-agents",
+              "label": "Economic Agents"
+            },
+            {
+              "key": "research-agents",
+              "label": "Research Agents"
+            },
+            {
+              "key": "operational-agents",
+              "label": "Operational Agents"
+            },
+            {
+              "key": "multi-agent-systems",
+              "label": "Multi-Agent Systems"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "machine-reasoning",
+          "label": "Machine Reasoning",
+          "subcategories": [
+            {
+              "key": "planning",
+              "label": "Planning"
+            },
+            {
+              "key": "decision-support",
+              "label": "Decision Support"
+            },
+            {
+              "key": "optimization",
+              "label": "Optimization"
+            },
+            {
+              "key": "machine-decisioning",
+              "label": "Machine Decisioning"
+            },
+            {
+              "key": "autonomous-reasoning",
+              "label": "Autonomous Reasoning"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "ai-infrastructure-services",
+          "label": "AI Infrastructure Services",
+          "subcategories": [
+            {
+              "key": "model-serving",
+              "label": "Model Serving"
+            },
+            {
+              "key": "training-infrastructure",
+              "label": "Training Infrastructure"
+            },
+            {
+              "key": "vector-infrastructure",
+              "label": "Vector Infrastructure"
+            },
+            {
+              "key": "ai-runtime",
+              "label": "AI Runtime"
+            },
+            {
+              "key": "agent-infrastructure",
+              "label": "Agent Infrastructure"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "13",
+      "key": "research-analytics-and-intelligence",
+      "label": "Research, Analytics & Intelligence",
+      "categories": [
+        {
+          "key": "research",
+          "label": "Research",
+          "subcategories": [
+            {
+              "key": "scientific-research",
+              "label": "Scientific Research"
+            },
+            {
+              "key": "technical-research",
+              "label": "Technical Research"
+            },
+            {
+              "key": "economic-research",
+              "label": "Economic Research"
+            },
+            {
+              "key": "commercial-research",
+              "label": "Commercial Research"
+            },
+            {
+              "key": "automated-research",
+              "label": "Automated Research"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "analytics",
+          "label": "Analytics",
+          "subcategories": [
+            {
+              "key": "descriptive-analytics",
+              "label": "Descriptive Analytics"
+            },
+            {
+              "key": "predictive-analytics",
+              "label": "Predictive Analytics"
+            },
+            {
+              "key": "prescriptive-analytics",
+              "label": "Prescriptive Analytics"
+            },
+            {
+              "key": "operational-analytics",
+              "label": "Operational Analytics"
+            },
+            {
+              "key": "machine-analytics",
+              "label": "Machine Analytics"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "economic-intelligence",
+          "label": "Economic Intelligence",
+          "subcategories": [
+            {
+              "key": "economic-indicators",
+              "label": "Economic Indicators"
+            },
+            {
+              "key": "network-economics",
+              "label": "Network Economics"
+            },
+            {
+              "key": "reserve-intelligence",
+              "label": "Reserve Intelligence"
+            },
+            {
+              "key": "transaction-intelligence",
+              "label": "Transaction Intelligence"
+            },
+            {
+              "key": "machine-economy-intelligence",
+              "label": "Machine-Economy Intelligence"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "market-intelligence",
+          "label": "Market Intelligence",
+          "subcategories": [
+            {
+              "key": "market-research",
+              "label": "Market Research"
+            },
+            {
+              "key": "competitive-intelligence",
+              "label": "Competitive Intelligence"
+            },
+            {
+              "key": "opportunity-intelligence",
+              "label": "Opportunity Intelligence"
+            },
+            {
+              "key": "demand-intelligence",
+              "label": "Demand Intelligence"
+            },
+            {
+              "key": "pricing-intelligence",
+              "label": "Pricing Intelligence"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "forecasting",
+          "label": "Forecasting",
+          "subcategories": [
+            {
+              "key": "economic-forecasting",
+              "label": "Economic Forecasting"
+            },
+            {
+              "key": "demand-forecasting",
+              "label": "Demand Forecasting"
+            },
+            {
+              "key": "price-forecasting",
+              "label": "Price Forecasting"
+            },
+            {
+              "key": "operational-forecasting",
+              "label": "Operational Forecasting"
+            },
+            {
+              "key": "predictive-signals",
+              "label": "Predictive Signals"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "scoring-and-evaluation",
+          "label": "Scoring & Evaluation",
+          "subcategories": [
+            {
+              "key": "risk-scoring",
+              "label": "Risk Scoring"
+            },
+            {
+              "key": "opportunity-scoring",
+              "label": "Opportunity Scoring"
+            },
+            {
+              "key": "performance-scoring",
+              "label": "Performance Scoring"
+            },
+            {
+              "key": "economic-scoring",
+              "label": "Economic Scoring"
+            },
+            {
+              "key": "machine-evaluation",
+              "label": "Machine Evaluation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "14",
+      "key": "automation-and-workflow",
+      "label": "Automation & Workflow",
+      "categories": [
+        {
+          "key": "workflow-automation",
+          "label": "Workflow Automation",
+          "subcategories": [
+            {
+              "key": "business-workflows",
+              "label": "Business Workflows"
+            },
+            {
+              "key": "technical-workflows",
+              "label": "Technical Workflows"
+            },
+            {
+              "key": "data-workflows",
+              "label": "Data Workflows"
+            },
+            {
+              "key": "machine-workflows",
+              "label": "Machine Workflows"
+            },
+            {
+              "key": "cross-machine-workflows",
+              "label": "Cross-Machine Workflows"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "process-automation",
+          "label": "Process Automation",
+          "subcategories": [
+            {
+              "key": "administrative-automation",
+              "label": "Administrative Automation"
+            },
+            {
+              "key": "industrial-automation",
+              "label": "Industrial Automation"
+            },
+            {
+              "key": "digital-process-automation",
+              "label": "Digital Process Automation"
+            },
+            {
+              "key": "economic-process-automation",
+              "label": "Economic Process Automation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "orchestration",
+          "label": "Orchestration",
+          "subcategories": [
+            {
+              "key": "service-orchestration",
+              "label": "Service Orchestration"
+            },
+            {
+              "key": "machine-orchestration",
+              "label": "Machine Orchestration"
+            },
+            {
+              "key": "resource-orchestration",
+              "label": "Resource Orchestration"
+            },
+            {
+              "key": "multi-agent-orchestration",
+              "label": "Multi-Agent Orchestration"
+            },
+            {
+              "key": "economic-orchestration",
+              "label": "Economic Orchestration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "task-execution",
+          "label": "Task Execution",
+          "subcategories": [
+            {
+              "key": "digital-tasks",
+              "label": "Digital Tasks"
+            },
+            {
+              "key": "physical-tasks",
+              "label": "Physical Tasks"
+            },
+            {
+              "key": "machine-tasks",
+              "label": "Machine Tasks"
+            },
+            {
+              "key": "scheduled-tasks",
+              "label": "Scheduled Tasks"
+            },
+            {
+              "key": "autonomous-tasks",
+              "label": "Autonomous Tasks"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "autonomous-workflows",
+          "label": "Autonomous Workflows",
+          "subcategories": [
+            {
+              "key": "agentic-workflows",
+              "label": "Agentic Workflows"
+            },
+            {
+              "key": "machine-to-machine-workflows",
+              "label": "Machine-to-Machine Workflows"
+            },
+            {
+              "key": "self-executing-workflows",
+              "label": "Self-Executing Workflows"
+            },
+            {
+              "key": "event-driven-workflows",
+              "label": "Event-Driven Workflows"
+            },
+            {
+              "key": "economic-workflows",
+              "label": "Economic Workflows"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "scheduling-and-coordination",
+          "label": "Scheduling & Coordination",
+          "subcategories": [
+            {
+              "key": "job-scheduling",
+              "label": "Job Scheduling"
+            },
+            {
+              "key": "resource-scheduling",
+              "label": "Resource Scheduling"
+            },
+            {
+              "key": "machine-scheduling",
+              "label": "Machine Scheduling"
+            },
+            {
+              "key": "fleet-coordination",
+              "label": "Fleet Coordination"
+            },
+            {
+              "key": "multi-machine-coordination",
+              "label": "Multi-Machine Coordination"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "15",
+      "key": "communications-and-connectivity",
+      "label": "Communications & Connectivity",
+      "categories": [
+        {
+          "key": "telecommunications",
+          "label": "Telecommunications",
+          "subcategories": [
+            {
+              "key": "voice",
+              "label": "Voice"
+            },
+            {
+              "key": "data-transmission",
+              "label": "Data Transmission"
+            },
+            {
+              "key": "wireless-communications",
+              "label": "Wireless Communications"
+            },
+            {
+              "key": "satellite-communications",
+              "label": "Satellite Communications"
+            },
+            {
+              "key": "machine-telecommunications",
+              "label": "Machine Telecommunications"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "messaging",
+          "label": "Messaging",
+          "subcategories": [
+            {
+              "key": "human-messaging",
+              "label": "Human Messaging"
+            },
+            {
+              "key": "machine-messaging",
+              "label": "Machine Messaging"
+            },
+            {
+              "key": "event-messaging",
+              "label": "Event Messaging"
+            },
+            {
+              "key": "notification-services",
+              "label": "Notification Services"
+            },
+            {
+              "key": "secure-messaging",
+              "label": "Secure Messaging"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "network-connectivity",
+          "label": "Network Connectivity",
+          "subcategories": [
+            {
+              "key": "internet-connectivity",
+              "label": "Internet Connectivity"
+            },
+            {
+              "key": "private-networks",
+              "label": "Private Networks"
+            },
+            {
+              "key": "wireless-connectivity",
+              "label": "Wireless Connectivity"
+            },
+            {
+              "key": "device-connectivity",
+              "label": "Device Connectivity"
+            },
+            {
+              "key": "machine-connectivity",
+              "label": "Machine Connectivity"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "protocol-services",
+          "label": "Protocol Services",
+          "subcategories": [
+            {
+              "key": "protocol-translation",
+              "label": "Protocol Translation"
+            },
+            {
+              "key": "protocol-routing",
+              "label": "Protocol Routing"
+            },
+            {
+              "key": "protocol-gateways",
+              "label": "Protocol Gateways"
+            },
+            {
+              "key": "api-protocol-services",
+              "label": "API Protocol Services"
+            },
+            {
+              "key": "machine-protocols",
+              "label": "Machine Protocols"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "machine-communications",
+          "label": "Machine Communications",
+          "subcategories": [
+            {
+              "key": "machine-to-machine-messaging",
+              "label": "Machine-to-Machine Messaging"
+            },
+            {
+              "key": "agent-communication",
+              "label": "Agent Communication"
+            },
+            {
+              "key": "fleet-communication",
+              "label": "Fleet Communication"
+            },
+            {
+              "key": "swarm-communication",
+              "label": "Swarm Communication"
+            },
+            {
+              "key": "economic-messaging",
+              "label": "Economic Messaging"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "federation-and-interoperability",
+          "label": "Federation & Interoperability",
+          "subcategories": [
+            {
+              "key": "system-federation",
+              "label": "System Federation"
+            },
+            {
+              "key": "machine-federation",
+              "label": "Machine Federation"
+            },
+            {
+              "key": "cross-network-integration",
+              "label": "Cross-Network Integration"
+            },
+            {
+              "key": "protocol-interoperability",
+              "label": "Protocol Interoperability"
+            },
+            {
+              "key": "external-docking",
+              "label": "External Docking"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "16",
+      "key": "security-safety-and-assurance",
+      "label": "Security, Safety & Assurance",
+      "categories": [
+        {
+          "key": "cybersecurity",
+          "label": "Cybersecurity",
+          "subcategories": [
+            {
+              "key": "network-security",
+              "label": "Network Security"
+            },
+            {
+              "key": "application-security",
+              "label": "Application Security"
+            },
+            {
+              "key": "machine-security",
+              "label": "Machine Security"
+            },
+            {
+              "key": "access-security",
+              "label": "Access Security"
+            },
+            {
+              "key": "security-testing",
+              "label": "Security Testing"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "integrity-monitoring",
+          "label": "Integrity Monitoring",
+          "subcategories": [
+            {
+              "key": "system-integrity",
+              "label": "System Integrity"
+            },
+            {
+              "key": "data-integrity",
+              "label": "Data Integrity"
+            },
+            {
+              "key": "machine-integrity",
+              "label": "Machine Integrity"
+            },
+            {
+              "key": "transaction-integrity",
+              "label": "Transaction Integrity"
+            },
+            {
+              "key": "network-integrity",
+              "label": "Network Integrity"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "threat-and-anomaly-detection",
+          "label": "Threat & Anomaly Detection",
+          "subcategories": [
+            {
+              "key": "threat-detection",
+              "label": "Threat Detection"
+            },
+            {
+              "key": "fraud-detection",
+              "label": "Fraud Detection"
+            },
+            {
+              "key": "behavioral-anomalies",
+              "label": "Behavioral Anomalies"
+            },
+            {
+              "key": "machine-anomalies",
+              "label": "Machine Anomalies"
+            },
+            {
+              "key": "network-anomalies",
+              "label": "Network Anomalies"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "validation-and-verification",
+          "label": "Validation & Verification",
+          "subcategories": [
+            {
+              "key": "data-verification",
+              "label": "Data Verification"
+            },
+            {
+              "key": "machine-verification",
+              "label": "Machine Verification"
+            },
+            {
+              "key": "transaction-verification",
+              "label": "Transaction Verification"
+            },
+            {
+              "key": "compliance-validation",
+              "label": "Compliance Validation"
+            },
+            {
+              "key": "independent-validation",
+              "label": "Independent Validation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "risk-and-assurance",
+          "label": "Risk & Assurance",
+          "subcategories": [
+            {
+              "key": "risk-assessment",
+              "label": "Risk Assessment"
+            },
+            {
+              "key": "assurance-services",
+              "label": "Assurance Services"
+            },
+            {
+              "key": "control-evaluation",
+              "label": "Control Evaluation"
+            },
+            {
+              "key": "operational-risk",
+              "label": "Operational Risk"
+            },
+            {
+              "key": "economic-risk",
+              "label": "Economic Risk"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "physical-operational-safety",
+          "label": "Physical/Operational Safety",
+          "subcategories": [
+            {
+              "key": "equipment-safety",
+              "label": "Equipment Safety"
+            },
+            {
+              "key": "workplace-safety",
+              "label": "Workplace Safety"
+            },
+            {
+              "key": "autonomous-system-safety",
+              "label": "Autonomous-System Safety"
+            },
+            {
+              "key": "operational-monitoring",
+              "label": "Operational Monitoring"
+            },
+            {
+              "key": "safety-verification",
+              "label": "Safety Verification"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "17",
+      "key": "identity-registry-and-trust-services",
+      "label": "Identity, Registry & Trust Services",
+      "categories": [
+        {
+          "key": "identity-services",
+          "label": "Identity Services",
+          "subcategories": [
+            {
+              "key": "machine-identity",
+              "label": "Machine Identity"
+            },
+            {
+              "key": "digital-identity",
+              "label": "Digital Identity"
+            },
+            {
+              "key": "entity-resolution",
+              "label": "Entity Resolution"
+            },
+            {
+              "key": "identity-verification",
+              "label": "Identity Verification"
+            },
+            {
+              "key": "identity-lifecycle",
+              "label": "Identity Lifecycle"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "credentialing",
+          "label": "Credentialing",
+          "subcategories": [
+            {
+              "key": "digital-credentials",
+              "label": "Digital Credentials"
+            },
+            {
+              "key": "machine-credentials",
+              "label": "Machine Credentials"
+            },
+            {
+              "key": "authorization-credentials",
+              "label": "Authorization Credentials"
+            },
+            {
+              "key": "qualification-credentials",
+              "label": "Qualification Credentials"
+            },
+            {
+              "key": "credential-verification",
+              "label": "Credential Verification"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "registry-services",
+          "label": "Registry Services",
+          "subcategories": [
+            {
+              "key": "machine-registries",
+              "label": "Machine Registries"
+            },
+            {
+              "key": "product-service-registries",
+              "label": "Product/Service Registries"
+            },
+            {
+              "key": "asset-registries",
+              "label": "Asset Registries"
+            },
+            {
+              "key": "credential-registries",
+              "label": "Credential Registries"
+            },
+            {
+              "key": "economic-registries",
+              "label": "Economic Registries"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "directory-services",
+          "label": "Directory Services",
+          "subcategories": [
+            {
+              "key": "machine-directories",
+              "label": "Machine Directories"
+            },
+            {
+              "key": "service-directories",
+              "label": "Service Directories"
+            },
+            {
+              "key": "provider-directories",
+              "label": "Provider Directories"
+            },
+            {
+              "key": "resource-directories",
+              "label": "Resource Directories"
+            },
+            {
+              "key": "discovery-directories",
+              "label": "Discovery Directories"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "attestation-and-provenance",
+          "label": "Attestation & Provenance",
+          "subcategories": [
+            {
+              "key": "data-provenance",
+              "label": "Data Provenance"
+            },
+            {
+              "key": "machine-attestation",
+              "label": "Machine Attestation"
+            },
+            {
+              "key": "artifact-provenance",
+              "label": "Artifact Provenance"
+            },
+            {
+              "key": "transaction-provenance",
+              "label": "Transaction Provenance"
+            },
+            {
+              "key": "source-attestation",
+              "label": "Source Attestation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "reputation-and-trust",
+          "label": "Reputation & Trust",
+          "subcategories": [
+            {
+              "key": "reputation-scoring",
+              "label": "Reputation Scoring"
+            },
+            {
+              "key": "trust-signals",
+              "label": "Trust Signals"
+            },
+            {
+              "key": "provider-reputation",
+              "label": "Provider Reputation"
+            },
+            {
+              "key": "machine-reputation",
+              "label": "Machine Reputation"
+            },
+            {
+              "key": "historical-trust-records",
+              "label": "Historical Trust Records"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "18",
+      "key": "finance-investment-and-insurance",
+      "label": "Finance, Investment & Insurance",
+      "categories": [
+        {
+          "key": "banking-and-payments",
+          "label": "Banking & Payments",
+          "subcategories": [
+            {
+              "key": "payment-services",
+              "label": "Payment Services"
+            },
+            {
+              "key": "account-services",
+              "label": "Account Services"
+            },
+            {
+              "key": "transfer-services",
+              "label": "Transfer Services"
+            },
+            {
+              "key": "payment-processing",
+              "label": "Payment Processing"
+            },
+            {
+              "key": "machine-payments",
+              "label": "Machine Payments"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "capital-services",
+          "label": "Capital Services",
+          "subcategories": [
+            {
+              "key": "capital-sourcing",
+              "label": "Capital Sourcing"
+            },
+            {
+              "key": "capital-deployment",
+              "label": "Capital Deployment"
+            },
+            {
+              "key": "financing",
+              "label": "Financing"
+            },
+            {
+              "key": "treasury-services",
+              "label": "Treasury Services"
+            },
+            {
+              "key": "machine-capital",
+              "label": "Machine Capital"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "investment-services",
+          "label": "Investment Services",
+          "subcategories": [
+            {
+              "key": "investment-analysis",
+              "label": "Investment Analysis"
+            },
+            {
+              "key": "investment-execution",
+              "label": "Investment Execution"
+            },
+            {
+              "key": "portfolio-services",
+              "label": "Portfolio Services"
+            },
+            {
+              "key": "autonomous-investment",
+              "label": "Autonomous Investment"
+            },
+            {
+              "key": "investment-administration",
+              "label": "Investment Administration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "asset-management",
+          "label": "Asset Management",
+          "subcategories": [
+            {
+              "key": "portfolio-management",
+              "label": "Portfolio Management"
+            },
+            {
+              "key": "position-management",
+              "label": "Position Management"
+            },
+            {
+              "key": "asset-administration",
+              "label": "Asset Administration"
+            },
+            {
+              "key": "digital-asset-management",
+              "label": "Digital Asset Management"
+            },
+            {
+              "key": "machine-asset-management",
+              "label": "Machine Asset Management"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "insurance",
+          "label": "Insurance",
+          "subcategories": [
+            {
+              "key": "insurance-products",
+              "label": "Insurance Products"
+            },
+            {
+              "key": "underwriting",
+              "label": "Underwriting"
+            },
+            {
+              "key": "claims-services",
+              "label": "Claims Services"
+            },
+            {
+              "key": "risk-transfer",
+              "label": "Risk Transfer"
+            },
+            {
+              "key": "machine-technology-insurance",
+              "label": "Machine/Technology Insurance"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "financial-data-and-services",
+          "label": "Financial Data & Services",
+          "subcategories": [
+            {
+              "key": "financial-data",
+              "label": "Financial Data"
+            },
+            {
+              "key": "valuation",
+              "label": "Valuation"
+            },
+            {
+              "key": "financial-analytics",
+              "label": "Financial Analytics"
+            },
+            {
+              "key": "financial-reporting",
+              "label": "Financial Reporting"
+            },
+            {
+              "key": "financial-infrastructure-services",
+              "label": "Financial Infrastructure Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "19",
+      "key": "commerce-and-market-services",
+      "label": "Commerce & Market Services",
+      "categories": [
+        {
+          "key": "marketplaces",
+          "label": "Marketplaces",
+          "subcategories": [
+            {
+              "key": "product-marketplaces",
+              "label": "Product Marketplaces"
+            },
+            {
+              "key": "service-marketplaces",
+              "label": "Service Marketplaces"
+            },
+            {
+              "key": "machine-marketplaces",
+              "label": "Machine Marketplaces"
+            },
+            {
+              "key": "resource-marketplaces",
+              "label": "Resource Marketplaces"
+            },
+            {
+              "key": "digital-marketplaces",
+              "label": "Digital Marketplaces"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "procurement",
+          "label": "Procurement",
+          "subcategories": [
+            {
+              "key": "sourcing",
+              "label": "Sourcing"
+            },
+            {
+              "key": "supplier-discovery",
+              "label": "Supplier Discovery"
+            },
+            {
+              "key": "bid-management",
+              "label": "Bid Management"
+            },
+            {
+              "key": "autonomous-procurement",
+              "label": "Autonomous Procurement"
+            },
+            {
+              "key": "procurement-administration",
+              "label": "Procurement Administration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "sales-services",
+          "label": "Sales Services",
+          "subcategories": [
+            {
+              "key": "sales-execution",
+              "label": "Sales Execution"
+            },
+            {
+              "key": "sales-automation",
+              "label": "Sales Automation"
+            },
+            {
+              "key": "lead-services",
+              "label": "Lead Services"
+            },
+            {
+              "key": "autonomous-sales",
+              "label": "Autonomous Sales"
+            },
+            {
+              "key": "sales-administration",
+              "label": "Sales Administration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "purchasing-services",
+          "label": "Purchasing Services",
+          "subcategories": [
+            {
+              "key": "purchasing",
+              "label": "Purchasing"
+            },
+            {
+              "key": "order-management",
+              "label": "Order Management"
+            },
+            {
+              "key": "autonomous-purchasing",
+              "label": "Autonomous Purchasing"
+            },
+            {
+              "key": "acquisition-services",
+              "label": "Acquisition Services"
+            },
+            {
+              "key": "buyer-representation",
+              "label": "Buyer Representation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "price-discovery",
+          "label": "Price Discovery",
+          "subcategories": [
+            {
+              "key": "market-pricing",
+              "label": "Market Pricing"
+            },
+            {
+              "key": "auction-services",
+              "label": "Auction Services"
+            },
+            {
+              "key": "quote-discovery",
+              "label": "Quote Discovery"
+            },
+            {
+              "key": "dynamic-pricing",
+              "label": "Dynamic Pricing"
+            },
+            {
+              "key": "machine-price-discovery",
+              "label": "Machine Price Discovery"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "commercial-intermediation",
+          "label": "Commercial Intermediation",
+          "subcategories": [
+            {
+              "key": "brokerage",
+              "label": "Brokerage"
+            },
+            {
+              "key": "matching",
+              "label": "Matching"
+            },
+            {
+              "key": "exchange-services",
+              "label": "Exchange Services"
+            },
+            {
+              "key": "commercial-agents",
+              "label": "Commercial Agents"
+            },
+            {
+              "key": "machine-intermediation",
+              "label": "Machine Intermediation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "20",
+      "key": "business-and-professional-services",
+      "label": "Business & Professional Services",
+      "categories": [
+        {
+          "key": "consulting",
+          "label": "Consulting",
+          "subcategories": [
+            {
+              "key": "management-consulting",
+              "label": "Management Consulting"
+            },
+            {
+              "key": "technical-consulting",
+              "label": "Technical Consulting"
+            },
+            {
+              "key": "economic-consulting",
+              "label": "Economic Consulting"
+            },
+            {
+              "key": "strategy-consulting",
+              "label": "Strategy Consulting"
+            },
+            {
+              "key": "machine-consulting",
+              "label": "Machine Consulting"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "administrative-services",
+          "label": "Administrative Services",
+          "subcategories": [
+            {
+              "key": "clerical-services",
+              "label": "Clerical Services"
+            },
+            {
+              "key": "processing",
+              "label": "Processing"
+            },
+            {
+              "key": "scheduling",
+              "label": "Scheduling"
+            },
+            {
+              "key": "business-administration",
+              "label": "Business Administration"
+            },
+            {
+              "key": "automated-administration",
+              "label": "Automated Administration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "human-resources",
+          "label": "Human Resources",
+          "subcategories": [
+            {
+              "key": "recruitment",
+              "label": "Recruitment"
+            },
+            {
+              "key": "workforce-management",
+              "label": "Workforce Management"
+            },
+            {
+              "key": "payroll-support",
+              "label": "Payroll Support"
+            },
+            {
+              "key": "talent-services",
+              "label": "Talent Services"
+            },
+            {
+              "key": "human-machine-workforce-services",
+              "label": "Human-Machine Workforce Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "accounting-and-bookkeeping",
+          "label": "Accounting & Bookkeeping",
+          "subcategories": [
+            {
+              "key": "bookkeeping",
+              "label": "Bookkeeping"
+            },
+            {
+              "key": "accounting",
+              "label": "Accounting"
+            },
+            {
+              "key": "reconciliation",
+              "label": "Reconciliation"
+            },
+            {
+              "key": "financial-reporting",
+              "label": "Financial Reporting"
+            },
+            {
+              "key": "automated-accounting",
+              "label": "Automated Accounting"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "marketing-and-communications",
+          "label": "Marketing & Communications",
+          "subcategories": [
+            {
+              "key": "marketing",
+              "label": "Marketing"
+            },
+            {
+              "key": "advertising",
+              "label": "Advertising"
+            },
+            {
+              "key": "public-relations",
+              "label": "Public Relations"
+            },
+            {
+              "key": "outreach",
+              "label": "Outreach"
+            },
+            {
+              "key": "automated-marketing",
+              "label": "Automated Marketing"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "management-services",
+          "label": "Management Services",
+          "subcategories": [
+            {
+              "key": "operations-management",
+              "label": "Operations Management"
+            },
+            {
+              "key": "project-management",
+              "label": "Project Management"
+            },
+            {
+              "key": "program-management",
+              "label": "Program Management"
+            },
+            {
+              "key": "resource-management",
+              "label": "Resource Management"
+            },
+            {
+              "key": "machine-operations-management",
+              "label": "Machine Operations Management"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "21",
+      "key": "legal-contract-and-rights-services",
+      "label": "Legal, Contract & Rights Services",
+      "categories": [
+        {
+          "key": "legal-services",
+          "label": "Legal Services",
+          "subcategories": [
+            {
+              "key": "legal-research",
+              "label": "Legal Research"
+            },
+            {
+              "key": "legal-advisory",
+              "label": "Legal Advisory"
+            },
+            {
+              "key": "legal-documentation",
+              "label": "Legal Documentation"
+            },
+            {
+              "key": "dispute-services",
+              "label": "Dispute Services"
+            },
+            {
+              "key": "automated-legal-services",
+              "label": "Automated Legal Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "contract-services",
+          "label": "Contract Services",
+          "subcategories": [
+            {
+              "key": "contract-drafting",
+              "label": "Contract Drafting"
+            },
+            {
+              "key": "contract-review",
+              "label": "Contract Review"
+            },
+            {
+              "key": "contract-administration",
+              "label": "Contract Administration"
+            },
+            {
+              "key": "contract-negotiation",
+              "label": "Contract Negotiation"
+            },
+            {
+              "key": "machine-contracts",
+              "label": "Machine Contracts"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "licensing",
+          "label": "Licensing",
+          "subcategories": [
+            {
+              "key": "software-licensing",
+              "label": "Software Licensing"
+            },
+            {
+              "key": "technology-licensing",
+              "label": "Technology Licensing"
+            },
+            {
+              "key": "content-licensing",
+              "label": "Content Licensing"
+            },
+            {
+              "key": "machine-licensing",
+              "label": "Machine Licensing"
+            },
+            {
+              "key": "commercial-licensing",
+              "label": "Commercial Licensing"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "intellectual-property",
+          "label": "Intellectual Property",
+          "subcategories": [
+            {
+              "key": "patent-services",
+              "label": "Patent Services"
+            },
+            {
+              "key": "trademark-services",
+              "label": "Trademark Services"
+            },
+            {
+              "key": "copyright-services",
+              "label": "Copyright Services"
+            },
+            {
+              "key": "ip-management",
+              "label": "IP Management"
+            },
+            {
+              "key": "ip-intelligence",
+              "label": "IP Intelligence"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "rights-management",
+          "label": "Rights Management",
+          "subcategories": [
+            {
+              "key": "usage-rights",
+              "label": "Usage Rights"
+            },
+            {
+              "key": "access-rights",
+              "label": "Access Rights"
+            },
+            {
+              "key": "digital-rights",
+              "label": "Digital Rights"
+            },
+            {
+              "key": "machine-usage-rights",
+              "label": "Machine Usage Rights"
+            },
+            {
+              "key": "rights-administration",
+              "label": "Rights Administration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "compliance-services",
+          "label": "Compliance Services",
+          "subcategories": [
+            {
+              "key": "regulatory-compliance",
+              "label": "Regulatory Compliance"
+            },
+            {
+              "key": "contract-compliance",
+              "label": "Contract Compliance"
+            },
+            {
+              "key": "policy-compliance",
+              "label": "Policy Compliance"
+            },
+            {
+              "key": "automated-compliance",
+              "label": "Automated Compliance"
+            },
+            {
+              "key": "compliance-monitoring",
+              "label": "Compliance Monitoring"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "22",
+      "key": "documentation-publishing-and-media",
+      "label": "Documentation, Publishing & Media",
+      "categories": [
+        {
+          "key": "documentation",
+          "label": "Documentation",
+          "subcategories": [
+            {
+              "key": "technical-documentation",
+              "label": "Technical Documentation"
+            },
+            {
+              "key": "machine-documentation",
+              "label": "Machine Documentation"
+            },
+            {
+              "key": "operator-documentation",
+              "label": "Operator Documentation"
+            },
+            {
+              "key": "api-documentation",
+              "label": "API Documentation"
+            },
+            {
+              "key": "automated-documentation",
+              "label": "Automated Documentation"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "publishing",
+          "label": "Publishing",
+          "subcategories": [
+            {
+              "key": "digital-publishing",
+              "label": "Digital Publishing"
+            },
+            {
+              "key": "technical-publishing",
+              "label": "Technical Publishing"
+            },
+            {
+              "key": "automated-publishing",
+              "label": "Automated Publishing"
+            },
+            {
+              "key": "data-publication",
+              "label": "Data Publication"
+            },
+            {
+              "key": "machine-publication",
+              "label": "Machine Publication"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "books-and-written-media",
+          "label": "Books & Written Media",
+          "subcategories": [
+            {
+              "key": "books",
+              "label": "Books"
+            },
+            {
+              "key": "reports",
+              "label": "Reports"
+            },
+            {
+              "key": "manuals",
+              "label": "Manuals"
+            },
+            {
+              "key": "journals",
+              "label": "Journals"
+            },
+            {
+              "key": "machine-generated-written-products",
+              "label": "Machine-Generated Written Products"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "audio-and-visual-media",
+          "label": "Audio & Visual Media",
+          "subcategories": [
+            {
+              "key": "audio",
+              "label": "Audio"
+            },
+            {
+              "key": "video",
+              "label": "Video"
+            },
+            {
+              "key": "images",
+              "label": "Images"
+            },
+            {
+              "key": "multimedia",
+              "label": "Multimedia"
+            },
+            {
+              "key": "machine-generated-media",
+              "label": "Machine-Generated Media"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "digital-media",
+          "label": "Digital Media",
+          "subcategories": [
+            {
+              "key": "digital-content",
+              "label": "Digital Content"
+            },
+            {
+              "key": "interactive-content",
+              "label": "Interactive Content"
+            },
+            {
+              "key": "streaming-content",
+              "label": "Streaming Content"
+            },
+            {
+              "key": "machine-readable-publications",
+              "label": "Machine-Readable Publications"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "content-generation",
+          "label": "Content Generation",
+          "subcategories": [
+            {
+              "key": "written-content",
+              "label": "Written Content"
+            },
+            {
+              "key": "visual-content",
+              "label": "Visual Content"
+            },
+            {
+              "key": "audio-content",
+              "label": "Audio Content"
+            },
+            {
+              "key": "synthetic-media",
+              "label": "Synthetic Media"
+            },
+            {
+              "key": "automated-content",
+              "label": "Automated Content"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "23",
+      "key": "education-and-training",
+      "label": "Education & Training",
+      "categories": [
+        {
+          "key": "education",
+          "label": "Education",
+          "subcategories": [
+            {
+              "key": "academic-education",
+              "label": "Academic Education"
+            },
+            {
+              "key": "technical-education",
+              "label": "Technical Education"
+            },
+            {
+              "key": "professional-education",
+              "label": "Professional Education"
+            },
+            {
+              "key": "digital-education",
+              "label": "Digital Education"
+            },
+            {
+              "key": "machine-economy-education",
+              "label": "Machine-Economy Education"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "professional-training",
+          "label": "Professional Training",
+          "subcategories": [
+            {
+              "key": "workforce-training",
+              "label": "Workforce Training"
+            },
+            {
+              "key": "management-training",
+              "label": "Management Training"
+            },
+            {
+              "key": "skills-training",
+              "label": "Skills Training"
+            },
+            {
+              "key": "continuing-education",
+              "label": "Continuing Education"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "technical-training",
+          "label": "Technical Training",
+          "subcategories": [
+            {
+              "key": "software-training",
+              "label": "Software Training"
+            },
+            {
+              "key": "equipment-training",
+              "label": "Equipment Training"
+            },
+            {
+              "key": "machine-training",
+              "label": "Machine Training"
+            },
+            {
+              "key": "infrastructure-training",
+              "label": "Infrastructure Training"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "machine-training-resources",
+          "label": "Machine Training Resources",
+          "subcategories": [
+            {
+              "key": "training-datasets",
+              "label": "Training Datasets"
+            },
+            {
+              "key": "simulation-environments",
+              "label": "Simulation Environments"
+            },
+            {
+              "key": "evaluation-sets",
+              "label": "Evaluation Sets"
+            },
+            {
+              "key": "machine-learning-resources",
+              "label": "Machine Learning Resources"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "instructional-content",
+          "label": "Instructional Content",
+          "subcategories": [
+            {
+              "key": "courses",
+              "label": "Courses"
+            },
+            {
+              "key": "tutorials",
+              "label": "Tutorials"
+            },
+            {
+              "key": "manuals",
+              "label": "Manuals"
+            },
+            {
+              "key": "interactive-instruction",
+              "label": "Interactive Instruction"
+            },
+            {
+              "key": "machine-readable-instruction",
+              "label": "Machine-Readable Instruction"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "assessment-and-certification",
+          "label": "Assessment & Certification",
+          "subcategories": [
+            {
+              "key": "testing",
+              "label": "Testing"
+            },
+            {
+              "key": "skills-assessment",
+              "label": "Skills Assessment"
+            },
+            {
+              "key": "technical-certification",
+              "label": "Technical Certification"
+            },
+            {
+              "key": "machine-certification",
+              "label": "Machine Certification"
+            },
+            {
+              "key": "credential-assessment",
+              "label": "Credential Assessment"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "24",
+      "key": "healthcare-and-life-sciences",
+      "label": "Healthcare & Life Sciences",
+      "categories": [
+        {
+          "key": "healthcare-services",
+          "label": "Healthcare Services",
+          "subcategories": [
+            {
+              "key": "clinical-services",
+              "label": "Clinical Services"
+            },
+            {
+              "key": "remote-healthcare",
+              "label": "Remote Healthcare"
+            },
+            {
+              "key": "care-coordination",
+              "label": "Care Coordination"
+            },
+            {
+              "key": "health-administration",
+              "label": "Health Administration"
+            },
+            {
+              "key": "digital-health-services",
+              "label": "Digital Health Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "medical-products",
+          "label": "Medical Products",
+          "subcategories": [
+            {
+              "key": "medical-devices",
+              "label": "Medical Devices"
+            },
+            {
+              "key": "diagnostic-equipment",
+              "label": "Diagnostic Equipment"
+            },
+            {
+              "key": "clinical-supplies",
+              "label": "Clinical Supplies"
+            },
+            {
+              "key": "assistive-products",
+              "label": "Assistive Products"
+            },
+            {
+              "key": "digital-medical-products",
+              "label": "Digital Medical Products"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "pharmaceuticals",
+          "label": "Pharmaceuticals",
+          "subcategories": [
+            {
+              "key": "prescription-products",
+              "label": "Prescription Products"
+            },
+            {
+              "key": "nonprescription-products",
+              "label": "Nonprescription Products"
+            },
+            {
+              "key": "biopharmaceuticals",
+              "label": "Biopharmaceuticals"
+            },
+            {
+              "key": "pharmaceutical-services",
+              "label": "Pharmaceutical Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "biotechnology",
+          "label": "Biotechnology",
+          "subcategories": [
+            {
+              "key": "genomics",
+              "label": "Genomics"
+            },
+            {
+              "key": "bioinformatics",
+              "label": "Bioinformatics"
+            },
+            {
+              "key": "biological-engineering",
+              "label": "Biological Engineering"
+            },
+            {
+              "key": "laboratory-biotechnology",
+              "label": "Laboratory Biotechnology"
+            },
+            {
+              "key": "computational-biology",
+              "label": "Computational Biology"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "diagnostics",
+          "label": "Diagnostics",
+          "subcategories": [
+            {
+              "key": "laboratory-diagnostics",
+              "label": "Laboratory Diagnostics"
+            },
+            {
+              "key": "imaging-diagnostics",
+              "label": "Imaging Diagnostics"
+            },
+            {
+              "key": "digital-diagnostics",
+              "label": "Digital Diagnostics"
+            },
+            {
+              "key": "predictive-diagnostics",
+              "label": "Predictive Diagnostics"
+            },
+            {
+              "key": "machine-assisted-diagnostics",
+              "label": "Machine-Assisted Diagnostics"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "health-data-and-information",
+          "label": "Health Data & Information",
+          "subcategories": [
+            {
+              "key": "clinical-data",
+              "label": "Clinical Data"
+            },
+            {
+              "key": "health-records",
+              "label": "Health Records"
+            },
+            {
+              "key": "biomedical-data",
+              "label": "Biomedical Data"
+            },
+            {
+              "key": "health-analytics",
+              "label": "Health Analytics"
+            },
+            {
+              "key": "medical-reference-information",
+              "label": "Medical Reference Information"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "25",
+      "key": "environmental-and-sustainability",
+      "label": "Environmental & Sustainability",
+      "categories": [
+        {
+          "key": "environmental-services",
+          "label": "Environmental Services",
+          "subcategories": [
+            {
+              "key": "assessment",
+              "label": "Assessment"
+            },
+            {
+              "key": "consulting",
+              "label": "Consulting"
+            },
+            {
+              "key": "environmental-management",
+              "label": "Environmental Management"
+            },
+            {
+              "key": "ecological-services",
+              "label": "Ecological Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "environmental-monitoring",
+          "label": "Environmental Monitoring",
+          "subcategories": [
+            {
+              "key": "air-monitoring",
+              "label": "Air Monitoring"
+            },
+            {
+              "key": "water-monitoring",
+              "label": "Water Monitoring"
+            },
+            {
+              "key": "soil-monitoring",
+              "label": "Soil Monitoring"
+            },
+            {
+              "key": "climate-monitoring",
+              "label": "Climate Monitoring"
+            },
+            {
+              "key": "automated-environmental-monitoring",
+              "label": "Automated Environmental Monitoring"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "waste-and-recycling",
+          "label": "Waste & Recycling",
+          "subcategories": [
+            {
+              "key": "waste-collection",
+              "label": "Waste Collection"
+            },
+            {
+              "key": "recycling",
+              "label": "Recycling"
+            },
+            {
+              "key": "materials-recovery",
+              "label": "Materials Recovery"
+            },
+            {
+              "key": "hazardous-waste-services",
+              "label": "Hazardous Waste Services"
+            },
+            {
+              "key": "automated-waste-management",
+              "label": "Automated Waste Management"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "remediation",
+          "label": "Remediation",
+          "subcategories": [
+            {
+              "key": "soil-remediation",
+              "label": "Soil Remediation"
+            },
+            {
+              "key": "water-remediation",
+              "label": "Water Remediation"
+            },
+            {
+              "key": "site-restoration",
+              "label": "Site Restoration"
+            },
+            {
+              "key": "pollution-control",
+              "label": "Pollution Control"
+            },
+            {
+              "key": "environmental-recovery",
+              "label": "Environmental Recovery"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "sustainability-services",
+          "label": "Sustainability Services",
+          "subcategories": [
+            {
+              "key": "carbon-accounting",
+              "label": "Carbon Accounting"
+            },
+            {
+              "key": "sustainability-analytics",
+              "label": "Sustainability Analytics"
+            },
+            {
+              "key": "resource-efficiency",
+              "label": "Resource Efficiency"
+            },
+            {
+              "key": "esg-sustainability-reporting",
+              "label": "ESG/Sustainability Reporting"
+            },
+            {
+              "key": "optimization",
+              "label": "Optimization"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "conservation",
+          "label": "Conservation",
+          "subcategories": [
+            {
+              "key": "habitat-conservation",
+              "label": "Habitat Conservation"
+            },
+            {
+              "key": "resource-conservation",
+              "label": "Resource Conservation"
+            },
+            {
+              "key": "biodiversity-services",
+              "label": "Biodiversity Services"
+            },
+            {
+              "key": "land-stewardship",
+              "label": "Land Stewardship"
+            },
+            {
+              "key": "conservation-monitoring",
+              "label": "Conservation Monitoring"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "26",
+      "key": "utilities-and-public-services",
+      "label": "Utilities & Public Services",
+      "categories": [
+        {
+          "key": "water-and-wastewater",
+          "label": "Water & Wastewater",
+          "subcategories": [
+            {
+              "key": "water-supply",
+              "label": "Water Supply"
+            },
+            {
+              "key": "treatment",
+              "label": "Treatment"
+            },
+            {
+              "key": "wastewater-services",
+              "label": "Wastewater Services"
+            },
+            {
+              "key": "water-monitoring",
+              "label": "Water Monitoring"
+            },
+            {
+              "key": "water-infrastructure-services",
+              "label": "Water Infrastructure Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "electric-utility-services",
+          "label": "Electric Utility Services",
+          "subcategories": [
+            {
+              "key": "electricity-supply",
+              "label": "Electricity Supply"
+            },
+            {
+              "key": "grid-services",
+              "label": "Grid Services"
+            },
+            {
+              "key": "metering",
+              "label": "Metering"
+            },
+            {
+              "key": "grid-management",
+              "label": "Grid Management"
+            },
+            {
+              "key": "distributed-utility-services",
+              "label": "Distributed Utility Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "gas-utility-services",
+          "label": "Gas Utility Services",
+          "subcategories": [
+            {
+              "key": "gas-supply",
+              "label": "Gas Supply"
+            },
+            {
+              "key": "distribution",
+              "label": "Distribution"
+            },
+            {
+              "key": "metering",
+              "label": "Metering"
+            },
+            {
+              "key": "infrastructure-services",
+              "label": "Infrastructure Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "public-infrastructure-services",
+          "label": "Public Infrastructure Services",
+          "subcategories": [
+            {
+              "key": "infrastructure-operations",
+              "label": "Infrastructure Operations"
+            },
+            {
+              "key": "public-works",
+              "label": "Public Works"
+            },
+            {
+              "key": "infrastructure-monitoring",
+              "label": "Infrastructure Monitoring"
+            },
+            {
+              "key": "public-asset-services",
+              "label": "Public Asset Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "municipal-services",
+          "label": "Municipal Services",
+          "subcategories": [
+            {
+              "key": "sanitation",
+              "label": "Sanitation"
+            },
+            {
+              "key": "municipal-operations",
+              "label": "Municipal Operations"
+            },
+            {
+              "key": "community-services",
+              "label": "Community Services"
+            },
+            {
+              "key": "municipal-technology-services",
+              "label": "Municipal Technology Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "utility-management",
+          "label": "Utility Management",
+          "subcategories": [
+            {
+              "key": "metering",
+              "label": "Metering"
+            },
+            {
+              "key": "billing-support",
+              "label": "Billing Support"
+            },
+            {
+              "key": "demand-management",
+              "label": "Demand Management"
+            },
+            {
+              "key": "asset-management",
+              "label": "Asset Management"
+            },
+            {
+              "key": "automated-utility-operations",
+              "label": "Automated Utility Operations"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "27",
+      "key": "real-estate-property-and-facilities",
+      "label": "Real Estate, Property & Facilities",
+      "categories": [
+        {
+          "key": "real-estate",
+          "label": "Real Estate",
+          "subcategories": [
+            {
+              "key": "residential-property",
+              "label": "Residential Property"
+            },
+            {
+              "key": "commercial-property",
+              "label": "Commercial Property"
+            },
+            {
+              "key": "industrial-property",
+              "label": "Industrial Property"
+            },
+            {
+              "key": "land",
+              "label": "Land"
+            },
+            {
+              "key": "specialized-property",
+              "label": "Specialized Property"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "property-services",
+          "label": "Property Services",
+          "subcategories": [
+            {
+              "key": "brokerage",
+              "label": "Brokerage"
+            },
+            {
+              "key": "property-management",
+              "label": "Property Management"
+            },
+            {
+              "key": "property-assessment",
+              "label": "Property Assessment"
+            },
+            {
+              "key": "property-transactions",
+              "label": "Property Transactions"
+            },
+            {
+              "key": "property-advisory",
+              "label": "Property Advisory"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "facility-management",
+          "label": "Facility Management",
+          "subcategories": [
+            {
+              "key": "facility-operations",
+              "label": "Facility Operations"
+            },
+            {
+              "key": "space-management",
+              "label": "Space Management"
+            },
+            {
+              "key": "building-management",
+              "label": "Building Management"
+            },
+            {
+              "key": "automated-facility-management",
+              "label": "Automated Facility Management"
+            },
+            {
+              "key": "facility-monitoring",
+              "label": "Facility Monitoring"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "property-data",
+          "label": "Property Data",
+          "subcategories": [
+            {
+              "key": "listings-data",
+              "label": "Listings Data"
+            },
+            {
+              "key": "valuation-data",
+              "label": "Valuation Data"
+            },
+            {
+              "key": "property-records",
+              "label": "Property Records"
+            },
+            {
+              "key": "geospatial-property-data",
+              "label": "Geospatial Property Data"
+            },
+            {
+              "key": "property-analytics",
+              "label": "Property Analytics"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "leasing-and-rental",
+          "label": "Leasing & Rental",
+          "subcategories": [
+            {
+              "key": "real-estate-leasing",
+              "label": "Real Estate Leasing"
+            },
+            {
+              "key": "equipment-rental",
+              "label": "Equipment Rental"
+            },
+            {
+              "key": "vehicle-rental",
+              "label": "Vehicle Rental"
+            },
+            {
+              "key": "short-term-rental",
+              "label": "Short-Term Rental"
+            },
+            {
+              "key": "machine-managed-rental",
+              "label": "Machine-Managed Rental"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "building-operations",
+          "label": "Building Operations",
+          "subcategories": [
+            {
+              "key": "building-systems",
+              "label": "Building Systems"
+            },
+            {
+              "key": "access-operations",
+              "label": "Access Operations"
+            },
+            {
+              "key": "energy-operations",
+              "label": "Energy Operations"
+            },
+            {
+              "key": "environmental-controls",
+              "label": "Environmental Controls"
+            },
+            {
+              "key": "smart-building-operations",
+              "label": "Smart Building Operations"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "28",
+      "key": "consumer-goods-and-personal-products",
+      "label": "Consumer Goods & Personal Products",
+      "categories": [
+        {
+          "key": "apparel-and-accessories",
+          "label": "Apparel & Accessories",
+          "subcategories": [
+            {
+              "key": "clothing",
+              "label": "Clothing"
+            },
+            {
+              "key": "footwear",
+              "label": "Footwear"
+            },
+            {
+              "key": "workwear",
+              "label": "Workwear"
+            },
+            {
+              "key": "protective-apparel",
+              "label": "Protective Apparel"
+            },
+            {
+              "key": "fashion-accessories",
+              "label": "Fashion Accessories"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "household-goods",
+          "label": "Household Goods",
+          "subcategories": [
+            {
+              "key": "furniture",
+              "label": "Furniture"
+            },
+            {
+              "key": "home-furnishings",
+              "label": "Home Furnishings"
+            },
+            {
+              "key": "kitchen-goods",
+              "label": "Kitchen Goods"
+            },
+            {
+              "key": "household-supplies",
+              "label": "Household Supplies"
+            },
+            {
+              "key": "home-organization",
+              "label": "Home Organization"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "appliances",
+          "label": "Appliances",
+          "subcategories": [
+            {
+              "key": "major-appliances",
+              "label": "Major Appliances"
+            },
+            {
+              "key": "small-appliances",
+              "label": "Small Appliances"
+            },
+            {
+              "key": "smart-appliances",
+              "label": "Smart Appliances"
+            },
+            {
+              "key": "climate-appliances",
+              "label": "Climate Appliances"
+            },
+            {
+              "key": "specialty-appliances",
+              "label": "Specialty Appliances"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "personal-care",
+          "label": "Personal Care",
+          "subcategories": [
+            {
+              "key": "hygiene-products",
+              "label": "Hygiene Products"
+            },
+            {
+              "key": "grooming-products",
+              "label": "Grooming Products"
+            },
+            {
+              "key": "cosmetics",
+              "label": "Cosmetics"
+            },
+            {
+              "key": "personal-care-devices",
+              "label": "Personal-Care Devices"
+            },
+            {
+              "key": "wellness-products",
+              "label": "Wellness Products"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "jewelry-and-accessories",
+          "label": "Jewelry & Accessories",
+          "subcategories": [
+            {
+              "key": "jewelry",
+              "label": "Jewelry"
+            },
+            {
+              "key": "watches",
+              "label": "Watches"
+            },
+            {
+              "key": "precious-metal-jewelry",
+              "label": "Precious-Metal Jewelry"
+            },
+            {
+              "key": "fashion-jewelry",
+              "label": "Fashion Jewelry"
+            },
+            {
+              "key": "personal-accessories",
+              "label": "Personal Accessories"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "general-consumer-products",
+          "label": "General Consumer Products",
+          "subcategories": [
+            {
+              "key": "general-merchandise",
+              "label": "General Merchandise"
+            },
+            {
+              "key": "lifestyle-products",
+              "label": "Lifestyle Products"
+            },
+            {
+              "key": "hobby-products",
+              "label": "Hobby Products"
+            },
+            {
+              "key": "durable-consumer-goods",
+              "label": "Durable Consumer Goods"
+            },
+            {
+              "key": "nondurable-consumer-goods",
+              "label": "Nondurable Consumer Goods"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "29",
+      "key": "food-beverage-and-hospitality",
+      "label": "Food, Beverage & Hospitality",
+      "categories": [
+        {
+          "key": "food-products",
+          "label": "Food Products",
+          "subcategories": [
+            {
+              "key": "fresh-foods",
+              "label": "Fresh Foods"
+            },
+            {
+              "key": "prepared-foods",
+              "label": "Prepared Foods"
+            },
+            {
+              "key": "packaged-foods",
+              "label": "Packaged Foods"
+            },
+            {
+              "key": "ingredients",
+              "label": "Ingredients"
+            },
+            {
+              "key": "specialty-foods",
+              "label": "Specialty Foods"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "beverages",
+          "label": "Beverages",
+          "subcategories": [
+            {
+              "key": "nonalcoholic-beverages",
+              "label": "Nonalcoholic Beverages"
+            },
+            {
+              "key": "beverage-ingredients",
+              "label": "Beverage Ingredients"
+            },
+            {
+              "key": "prepared-beverages",
+              "label": "Prepared Beverages"
+            },
+            {
+              "key": "specialty-beverages",
+              "label": "Specialty Beverages"
+            },
+            {
+              "key": "beverage-products",
+              "label": "Beverage Products"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "food-services",
+          "label": "Food Services",
+          "subcategories": [
+            {
+              "key": "restaurant-services",
+              "label": "Restaurant Services"
+            },
+            {
+              "key": "meal-preparation",
+              "label": "Meal Preparation"
+            },
+            {
+              "key": "food-delivery",
+              "label": "Food Delivery"
+            },
+            {
+              "key": "institutional-food-services",
+              "label": "Institutional Food Services"
+            },
+            {
+              "key": "automated-food-services",
+              "label": "Automated Food Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "lodging",
+          "label": "Lodging",
+          "subcategories": [
+            {
+              "key": "hotels",
+              "label": "Hotels"
+            },
+            {
+              "key": "short-term-lodging",
+              "label": "Short-Term Lodging"
+            },
+            {
+              "key": "extended-stay-lodging",
+              "label": "Extended-Stay Lodging"
+            },
+            {
+              "key": "specialized-lodging",
+              "label": "Specialized Lodging"
+            },
+            {
+              "key": "automated-lodging-services",
+              "label": "Automated Lodging Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "catering",
+          "label": "Catering",
+          "subcategories": [
+            {
+              "key": "event-catering",
+              "label": "Event Catering"
+            },
+            {
+              "key": "institutional-catering",
+              "label": "Institutional Catering"
+            },
+            {
+              "key": "mobile-catering",
+              "label": "Mobile Catering"
+            },
+            {
+              "key": "meal-programs",
+              "label": "Meal Programs"
+            },
+            {
+              "key": "automated-catering-coordination",
+              "label": "Automated Catering Coordination"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "hospitality-services",
+          "label": "Hospitality Services",
+          "subcategories": [
+            {
+              "key": "guest-services",
+              "label": "Guest Services"
+            },
+            {
+              "key": "reservation-services",
+              "label": "Reservation Services"
+            },
+            {
+              "key": "hospitality-management",
+              "label": "Hospitality Management"
+            },
+            {
+              "key": "venue-services",
+              "label": "Venue Services"
+            },
+            {
+              "key": "automated-hospitality-services",
+              "label": "Automated Hospitality Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "30",
+      "key": "travel-recreation-and-entertainment",
+      "label": "Travel, Recreation & Entertainment",
+      "categories": [
+        {
+          "key": "travel-services",
+          "label": "Travel Services",
+          "subcategories": [
+            {
+              "key": "travel-booking",
+              "label": "Travel Booking"
+            },
+            {
+              "key": "travel-planning",
+              "label": "Travel Planning"
+            },
+            {
+              "key": "transportation-booking",
+              "label": "Transportation Booking"
+            },
+            {
+              "key": "travel-coordination",
+              "label": "Travel Coordination"
+            },
+            {
+              "key": "autonomous-travel-services",
+              "label": "Autonomous Travel Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "tourism",
+          "label": "Tourism",
+          "subcategories": [
+            {
+              "key": "tours",
+              "label": "Tours"
+            },
+            {
+              "key": "destination-services",
+              "label": "Destination Services"
+            },
+            {
+              "key": "visitor-services",
+              "label": "Visitor Services"
+            },
+            {
+              "key": "tourism-packages",
+              "label": "Tourism Packages"
+            },
+            {
+              "key": "tourism-information",
+              "label": "Tourism Information"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "recreation",
+          "label": "Recreation",
+          "subcategories": [
+            {
+              "key": "outdoor-recreation",
+              "label": "Outdoor Recreation"
+            },
+            {
+              "key": "indoor-recreation",
+              "label": "Indoor Recreation"
+            },
+            {
+              "key": "recreational-facilities",
+              "label": "Recreational Facilities"
+            },
+            {
+              "key": "equipment-based-recreation",
+              "label": "Equipment-Based Recreation"
+            },
+            {
+              "key": "recreation-services",
+              "label": "Recreation Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "sports",
+          "label": "Sports",
+          "subcategories": [
+            {
+              "key": "sporting-activities",
+              "label": "Sporting Activities"
+            },
+            {
+              "key": "sporting-events",
+              "label": "Sporting Events"
+            },
+            {
+              "key": "sports-services",
+              "label": "Sports Services"
+            },
+            {
+              "key": "sports-equipment-services",
+              "label": "Sports Equipment Services"
+            },
+            {
+              "key": "sports-data-and-analytics",
+              "label": "Sports Data & Analytics"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "games",
+          "label": "Games",
+          "subcategories": [
+            {
+              "key": "digital-games",
+              "label": "Digital Games"
+            },
+            {
+              "key": "physical-games",
+              "label": "Physical Games"
+            },
+            {
+              "key": "interactive-games",
+              "label": "Interactive Games"
+            },
+            {
+              "key": "simulation-games",
+              "label": "Simulation Games"
+            },
+            {
+              "key": "machine-participated-games",
+              "label": "Machine-Participated Games"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "arts-and-entertainment",
+          "label": "Arts & Entertainment",
+          "subcategories": [
+            {
+              "key": "performing-arts",
+              "label": "Performing Arts"
+            },
+            {
+              "key": "visual-arts",
+              "label": "Visual Arts"
+            },
+            {
+              "key": "live-entertainment",
+              "label": "Live Entertainment"
+            },
+            {
+              "key": "digital-entertainment",
+              "label": "Digital Entertainment"
+            },
+            {
+              "key": "entertainment-production",
+              "label": "Entertainment Production"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "31",
+      "key": "maintenance-repair-and-operational-services",
+      "label": "Maintenance, Repair & Operational Services",
+      "categories": [
+        {
+          "key": "maintenance",
+          "label": "Maintenance",
+          "subcategories": [
+            {
+              "key": "preventive-maintenance",
+              "label": "Preventive Maintenance"
+            },
+            {
+              "key": "predictive-maintenance",
+              "label": "Predictive Maintenance"
+            },
+            {
+              "key": "equipment-maintenance",
+              "label": "Equipment Maintenance"
+            },
+            {
+              "key": "infrastructure-maintenance",
+              "label": "Infrastructure Maintenance"
+            },
+            {
+              "key": "autonomous-maintenance",
+              "label": "Autonomous Maintenance"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "repair",
+          "label": "Repair",
+          "subcategories": [
+            {
+              "key": "mechanical-repair",
+              "label": "Mechanical Repair"
+            },
+            {
+              "key": "electrical-electronic-repair",
+              "label": "Electrical/Electronic Repair"
+            },
+            {
+              "key": "software-system-repair",
+              "label": "Software/System Repair"
+            },
+            {
+              "key": "equipment-repair",
+              "label": "Equipment Repair"
+            },
+            {
+              "key": "infrastructure-repair",
+              "label": "Infrastructure Repair"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "diagnostics",
+          "label": "Diagnostics",
+          "subcategories": [
+            {
+              "key": "equipment-diagnostics",
+              "label": "Equipment Diagnostics"
+            },
+            {
+              "key": "system-diagnostics",
+              "label": "System Diagnostics"
+            },
+            {
+              "key": "network-diagnostics",
+              "label": "Network Diagnostics"
+            },
+            {
+              "key": "machine-diagnostics",
+              "label": "Machine Diagnostics"
+            },
+            {
+              "key": "predictive-diagnostics",
+              "label": "Predictive Diagnostics"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "recovery-and-restoration",
+          "label": "Recovery & Restoration",
+          "subcategories": [
+            {
+              "key": "system-recovery",
+              "label": "System Recovery"
+            },
+            {
+              "key": "data-recovery",
+              "label": "Data Recovery"
+            },
+            {
+              "key": "equipment-restoration",
+              "label": "Equipment Restoration"
+            },
+            {
+              "key": "infrastructure-restoration",
+              "label": "Infrastructure Restoration"
+            },
+            {
+              "key": "operational-recovery",
+              "label": "Operational Recovery"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "cleaning-and-servicing",
+          "label": "Cleaning & Servicing",
+          "subcategories": [
+            {
+              "key": "industrial-cleaning",
+              "label": "Industrial Cleaning"
+            },
+            {
+              "key": "facility-cleaning",
+              "label": "Facility Cleaning"
+            },
+            {
+              "key": "equipment-servicing",
+              "label": "Equipment Servicing"
+            },
+            {
+              "key": "sanitation-services",
+              "label": "Sanitation Services"
+            },
+            {
+              "key": "automated-cleaning",
+              "label": "Automated Cleaning"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "operational-support",
+          "label": "Operational Support",
+          "subcategories": [
+            {
+              "key": "technical-support",
+              "label": "Technical Support"
+            },
+            {
+              "key": "system-support",
+              "label": "System Support"
+            },
+            {
+              "key": "machine-support",
+              "label": "Machine Support"
+            },
+            {
+              "key": "operational-assistance",
+              "label": "Operational Assistance"
+            },
+            {
+              "key": "remote-operations",
+              "label": "Remote Operations"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "32",
+      "key": "government-civic-and-organizational-services",
+      "label": "Government, Civic & Organizational Services",
+      "categories": [
+        {
+          "key": "government-services",
+          "label": "Government Services",
+          "subcategories": [
+            {
+              "key": "administrative-government-services",
+              "label": "Administrative Government Services"
+            },
+            {
+              "key": "public-administration",
+              "label": "Public Administration"
+            },
+            {
+              "key": "government-operations",
+              "label": "Government Operations"
+            },
+            {
+              "key": "digital-government-services",
+              "label": "Digital Government Services"
+            },
+            {
+              "key": "intergovernmental-services",
+              "label": "Intergovernmental Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "civic-services",
+          "label": "Civic Services",
+          "subcategories": [
+            {
+              "key": "community-services",
+              "label": "Community Services"
+            },
+            {
+              "key": "public-information",
+              "label": "Public Information"
+            },
+            {
+              "key": "civic-engagement",
+              "label": "Civic Engagement"
+            },
+            {
+              "key": "community-coordination",
+              "label": "Community Coordination"
+            },
+            {
+              "key": "digital-civic-services",
+              "label": "Digital Civic Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "regulatory-services",
+          "label": "Regulatory Services",
+          "subcategories": [
+            {
+              "key": "permitting",
+              "label": "Permitting"
+            },
+            {
+              "key": "licensing-administration",
+              "label": "Licensing Administration"
+            },
+            {
+              "key": "regulatory-processing",
+              "label": "Regulatory Processing"
+            },
+            {
+              "key": "regulatory-information",
+              "label": "Regulatory Information"
+            },
+            {
+              "key": "automated-regulatory-services",
+              "label": "Automated Regulatory Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "association-services",
+          "label": "Association Services",
+          "subcategories": [
+            {
+              "key": "trade-associations",
+              "label": "Trade Associations"
+            },
+            {
+              "key": "professional-associations",
+              "label": "Professional Associations"
+            },
+            {
+              "key": "membership-services",
+              "label": "Membership Services"
+            },
+            {
+              "key": "industry-coordination",
+              "label": "Industry Coordination"
+            },
+            {
+              "key": "association-administration",
+              "label": "Association Administration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "nonprofit-and-organizational-services",
+          "label": "Nonprofit & Organizational Services",
+          "subcategories": [
+            {
+              "key": "nonprofit-services",
+              "label": "Nonprofit Services"
+            },
+            {
+              "key": "charitable-services",
+              "label": "Charitable Services"
+            },
+            {
+              "key": "foundation-services",
+              "label": "Foundation Services"
+            },
+            {
+              "key": "organizational-support",
+              "label": "Organizational Support"
+            },
+            {
+              "key": "mission-based-services",
+              "label": "Mission-Based Services"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "institutional-administration",
+          "label": "Institutional Administration",
+          "subcategories": [
+            {
+              "key": "institutional-operations",
+              "label": "Institutional Operations"
+            },
+            {
+              "key": "records-administration",
+              "label": "Records Administration"
+            },
+            {
+              "key": "program-administration",
+              "label": "Program Administration"
+            },
+            {
+              "key": "resource-administration",
+              "label": "Resource Administration"
+            },
+            {
+              "key": "automated-institutional-administration",
+              "label": "Automated Institutional Administration"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        },
+        {
+          "key": "other",
+          "label": "OTHER",
+          "subcategories": []
+        }
+      ]
+    },
+    {
+      "code": "99",
+      "key": "other",
+      "label": "OTHER",
+      "categories": [
+        {
+          "key": "proposed-classification",
+          "label": "Proposed Classification",
+          "subcategories": [
+            {
+              "key": "publisher-supplied-classification",
+              "label": "Publisher-Supplied Classification"
+            },
+            {
+              "key": "other",
+              "label": "OTHER"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

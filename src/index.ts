@@ -90,3 +90,28 @@ export type {
   MigratePresenceBeaconInput,
   MigratedPresenceBeacon
 } from "./presence/migration-types.js";
+
+/**
+ * Phase 23.7 — Optional reference vocabularies
+ *
+ * These functions provide reference lookups only.
+ * Custom and third-party classifications remain permitted.
+ */
+
+export {
+  getIndustryDomains,
+  findIndustryDomain,
+  findIndustryCategory,
+  findIndustrySubcategory
+} from "./vocabulary/industry.js";
+
+export {
+  getReferenceCapabilities,
+  isReferenceCapability
+} from "./vocabulary/capabilities.js";
+
+export type {
+  IndustryDomain,
+  IndustryCategory,
+  IndustrySubcategory
+} from "./vocabulary/industry.js";

@@ -44,6 +44,7 @@
     "dist/",
     "schemas/",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "vocabularies/"
   ]
 }
