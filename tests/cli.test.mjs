@@ -2,9 +2,12 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { mkdtempSync, writeFileSync, rmSync, existsSync } from "node:fs";
+import { mkdtempSync, writeFileSync, rmSync, existsSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+
+import { createPresence } from "../dist/index.js";
+import { writePresenceArtifacts } from "../dist/cli/artifacts/write-presence.js";
 
 const cli = new URL("../dist/cli/index.js", import.meta.url);
 
@@ -92,7 +95,7 @@ test("CLI verify rejects malformed JSON", () => {
   }
 });
 
-import { createPresence } from "../dist/index.js";
+
 
 test("CLI verifies valid signed Genesis and Beacon", () => {
   const dir = mkdtempSync(join(tmpdir(), "motb8-cli-valid-"));
@@ -303,6 +306,77 @@ test("CLI create accepts UTF-8 BOM registration files", () => {
     assert.equal(result.status, 1);
     assert.match(result.stderr, /Creation failed/);
     assert.equal(existsSync(output), false);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("CLI migrate requires a machine directory", () => {
+  const result = runCli(["migrate"]);
+
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Usage: motb8 migrate/);
+});
+
+test("CLI update requires directory and changes file", () => {
+  const result = runCli(["update"]);
+
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Usage: motb8 update/);
+});
+
+test("CLI publish requires source and output directories", () => {
+  const result = runCli(["publish"]);
+
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Usage: motb8 publish/);
+});
+
+test("CLI publish prepares a public-only package", () => {
+  const dir = mkdtempSync(join(tmpdir(), "motb8-cli-publish-"));
+
+  try {
+    const source = join(dir, "machine-one");
+    const output = join(dir, "publication");
+
+    const presence = createPresence({
+      registration: {
+        name: "Synthetic Publishing Machine",
+        presenceScope: "single",
+        presenceType: "agent",
+        description: "A synthetic machine for testing the CLI publishing command.",
+        goodFaith: {
+          acknowledged: true,
+          termsVersion: "1.0",
+          acknowledgedAt: new Date().toISOString()
+        }
+      },
+      passphrase: "SyntheticPublishingTest123!"
+    });
+
+    writePresenceArtifacts(source, presence);
+
+    const result = runCli([
+      "publish",
+      "--directory", source,
+      "--output", output
+    ]);
+
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /publishing package prepared/);
+
+    const manifest = JSON.parse(
+      readFileSync(join(output, "manifest.json"), "utf8")
+    );
+
+    assert.equal(manifest.format, "MOTB8_PUBLICATION_PACKAGE");
+
+    const files = manifest.files.map(entry => entry.path);
+
+    assert.equal(files.includes("genesis.json"), true);
+    assert.equal(files.includes("beacon.json"), true);
+    assert.equal(files.some(name => name.includes("control-file")), false);
+    assert.equal(existsSync(join(output, "private")), false);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -2,12 +2,15 @@
 
 import { verifyArtifacts } from "./verify.js";
 import { createPresenceFromCli } from "./create.js";
+import { migratePresenceFromCli } from "./migrate.js";
+import { updatePresenceFromCli } from "./update.js";
+import { publishPresenceFromCli } from "./publish.js";
 
 const args = process.argv.slice(2);
 
 function showHelp(): void {
   console.log(`
-MOTB-8 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Machine Open Tag & Beacon
+MOTB-8 ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â Machine Open Tag & Beacon
 
 Make Your Machine Discoverable
 
@@ -56,6 +59,61 @@ if (
       await createPresenceFromCli(registrationPath, outputDirectory);
     } catch {
       console.error("Creation failed. Check registration and output settings.");
+      process.exitCode = 1;
+    }
+  }
+} else if (args[0] === "migrate") {
+  if (args.length !== 3 || args[1] !== "--directory" ||
+      !args[2] || args[2].startsWith("--")) {
+    console.error("Usage: motb8 migrate --directory <directory>");
+    process.exitCode = 1;
+  } else {
+    try {
+      await migratePresenceFromCli(args[2]);
+    } catch {
+      console.error("Migration failed. Check identity, authorization, and output.");
+      process.exitCode = 1;
+    }
+  }
+} else if (args[0] === "update") {
+  if (
+    args.length !== 5 ||
+    args[1] !== "--directory" ||
+    args[3] !== "--changes" ||
+    !args[2] || !args[4] ||
+    args[2].startsWith("--") ||
+    args[4].startsWith("--")
+  ) {
+    console.error(
+      "Usage: motb8 update --directory <directory> --changes <file>"
+    );
+    process.exitCode = 1;
+  } else {
+    try {
+      await updatePresenceFromCli(args[2], args[4]);
+    } catch {
+      console.error("Update failed. Check authorization and revision history.");
+      process.exitCode = 1;
+    }
+  }
+} else if (args[0] === "publish") {
+  if (
+    args.length !== 5 ||
+    args[1] !== "--directory" ||
+    args[3] !== "--output" ||
+    !args[2] || !args[4] ||
+    args[2].startsWith("--") ||
+    args[4].startsWith("--")
+  ) {
+    console.error(
+      "Usage: motb8 publish --directory <directory> --output <directory>"
+    );
+    process.exitCode = 1;
+  } else {
+    try {
+      publishPresenceFromCli(args[2], args[4]);
+    } catch {
+      console.error("Publishing preparation failed. Check source and output.");
       process.exitCode = 1;
     }
   }

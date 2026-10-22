@@ -1,4 +1,4 @@
-﻿import assert from "node:assert/strict";
+import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import { generateMotb8Tag } from "../dist/tag/generate.js";
@@ -10,6 +10,7 @@ import { generateDiscoverySummary } from "../dist/beacon/summary.js";
 import { computeBeaconHash } from "../dist/beacon/hash.js";
 import { encryptControlFile } from "../dist/control/encrypt.js";
 import { migratePresenceBeacon } from "../dist/presence/migrate.js";
+import { verifyBeaconChain } from "../dist/beacon/chain.js";
 
 const passphrase = "temporary-migration-test-passphrase-2026";
 
@@ -173,5 +174,50 @@ test("migration rejects inconsistent Genesis creation timestamp", () => {
   assert.throws(
     () => migrate(fixture, { genesis: alteredGenesis }),
     /creation timestamps differ/
+  );
+});
+
+test("migrated v1.1 Beacon forms a valid supplied revision chain", () => {
+  const fixture = createFixture();
+  const migrated = migrate(fixture);
+
+  const result = verifyBeaconChain(
+    [migrated.beacon],
+    fixture.genesis
+  );
+
+  assert.equal(
+    result.status,
+    "VALID_SUPPLIED_CHAIN",
+    result.reason
+  );
+});
+
+test("migration timestamp remains informational", () => {
+  const fixture = createFixture();
+  const before = Date.now();
+
+  const result = migrate(fixture);
+  const after = Date.now();
+
+  const migratedTime = Date.parse(result.migratedAt);
+
+  assert.equal(Number.isFinite(migratedTime), true);
+  assert.equal(migratedTime >= before, true);
+  assert.equal(migratedTime <= after, true);
+
+  assert.equal(
+    Object.hasOwn(result.beacon, "migratedAt"),
+    false
+  );
+
+  assert.equal(
+    result.beacon.updatedAt,
+    result.beacon.createdAt
+  );
+
+  assert.equal(
+    verifyBeaconChain([result.beacon], fixture.genesis).valid,
+    true
   );
 });

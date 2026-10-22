@@ -1,4 +1,4 @@
-﻿import { verifyBeacon } from "../beacon/verify.js";
+import { verifyBeacon } from "../beacon/verify.js";
 import { computeBeaconHash } from "../beacon/hash.js";
 import { generateDiscoverySummary } from "../beacon/summary.js";
 import { validateUnsignedBeaconStructure } from "../beacon/validate.js";
@@ -39,12 +39,7 @@ export function migratePresenceBeacon(
 
   const legacyBeaconHash = computeBeaconHash(legacy);
 
-  const updatedAt = new Date(
-    Math.max(
-      Date.now(),
-      Date.parse(legacy.updatedAt) + 1
-    )
-  ).toISOString();
+  const updatedAt = legacy.createdAt;
 
   const unsigned: Omit<MOTB8BeaconV11, "proof"> = {
     ...legacyUnsigned,
@@ -74,6 +69,7 @@ export function migratePresenceBeacon(
 
   return {
     beacon,
-    legacyBeaconHash
+    legacyBeaconHash,
+    migratedAt: new Date().toISOString()
   };
 }
