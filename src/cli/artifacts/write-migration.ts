@@ -1,3 +1,4 @@
+import { withPresenceWriteLock } from "./write-lock.js";
 import {
   existsSync,
   mkdirSync,
@@ -26,7 +27,8 @@ export function writeMigrationArtifacts(
   legacyBeacon: MOTB8BeaconV01,
   migration: MigratedPresenceBeacon
 ) {
-  const paths = getArtifactPaths(outputDirectory);
+  return withPresenceWriteLock(outputDirectory, () => {
+    const paths = getArtifactPaths(outputDirectory);
   const revisions = getRevisionPaths(outputDirectory);
 
   const storedGenesis = JSON.parse(
@@ -66,6 +68,7 @@ export function writeMigrationArtifacts(
   const temporary = join(paths.publicDir, ".beacon-migration.tmp");
   const written: string[] = [];
   let revisionsCreated = false;
+  let committed = false;
 
   try {
     mkdirSync(revisions.revisionsDir);
@@ -87,9 +90,14 @@ export function writeMigrationArtifacts(
     written.push(temporary);
 
     renameSync(temporary, paths.beacon);
+    committed = true;
 
     return revisions;
   } catch (error) {
+    if (committed) {
+      throw error;
+    }
+
     for (const file of written.reverse()) {
       try {
         unlinkSync(file);
@@ -108,4 +116,5 @@ export function writeMigrationArtifacts(
 
     throw error;
   }
+  });
 }

@@ -85,3 +85,26 @@ Migration Records are informational only and establish no independent authority.
 
 MOTB-8 requires no Monet integration, centralized registry, hosted account, or specific discovery provider.
 Third parties may independently implement compatible hosting, discovery, indexing, and publishing services.
+
+## Interrupted Operations and Recovery
+
+MOTB-8 uses an exclusive local write lock during migration and Beacon updates.
+The lock prevents cooperating processes from modifying the same machine presence simultaneously.
+
+If an operation is interrupted:
+
+1. Stop all CLI operations involving the affected machine directory.
+2. Make a secure backup of the complete machine directory.
+3. Confirm that no writer is still active before considering removal of a stale lock.
+4. Verify Genesis, the current signed Beacon, and available signed revision history.
+5. Preserve valid signed records even when the current Beacon has not advanced.
+6. Do not automatically promote pending revisions or regenerate historical signatures.
+7. If records are missing, inconsistent, or conflicting, stop and perform manual review.
+
+The recovery inspector reports CURRENT, PENDING_REVISION, LOCKED, or MANUAL_REVIEW.
+These statuses are diagnostic and do not independently authorize filesystem changes.
+
+A stale lock must not be removed solely because of its age.
+The operator must first establish that no active writer remains.
+
+Multi-file operations are not fully crash-atomic or guaranteed durable after power loss.

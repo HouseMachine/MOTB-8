@@ -1,4 +1,5 @@
-﻿import {
+import { withPresenceWriteLock } from "./write-lock.js";
+import {
   existsSync,
   readFileSync,
   renameSync,
@@ -22,7 +23,8 @@ export function writeUpdatedBeacon(
   previous: MOTB8BeaconV11,
   update: UpdatedPresenceBeacon
 ) {
-  const paths = getArtifactPaths(directory);
+  return withPresenceWriteLock(directory, () => {
+    const paths = getArtifactPaths(directory);
   const revisions = getRevisionPaths(directory);
 
   const storedGenesis = JSON.parse(
@@ -87,4 +89,5 @@ export function writeUpdatedBeacon(
     beacon: paths.beacon,
     revision: revisionPath
   };
+  });
 }
