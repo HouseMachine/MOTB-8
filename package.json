@@ -1,7 +1,7 @@
 {
   "name": "motb-8",
   "version": "0.1.0",
-  "description": "Open-source Machine Open Tag &amp; Beacon protocol for persistent, discoverable machine presence.",
+  "description": "Open-source Machine Open Tag & Beacon protocol for persistent, discoverable machine presence.",
   "main": "./dist/index.js",
   "scripts": {
     "test": "npm run build && node --test tests/*.test.mjs",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/HouseMachine/MOTB-8/issues"
   },
-  "homepage": "https://github.com/HouseMachine/MOTB-8#readme",
+  "homepage": "https://www.motb8.com",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^26.6.5",
@@ -43,6 +43,7 @@
   "files": [
     "dist/",
     "schemas/",
+    "docs/",
     "README.md",
     "LICENSE",
     "vocabularies/"
