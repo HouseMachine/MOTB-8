@@ -7,7 +7,8 @@
     "test": "npm run build && node --test tests/*.test.mjs",
     "build": "node scripts/generate-browser-validators.mjs && tsc && node scripts/copy-browser-validators.mjs && npm run build:browser",
     "lint": "eslint tests/**/*.mjs",
-    "build:browser": "esbuild src/browser/index.ts --bundle --platform=browser --format=esm --target=es2022 --outfile=dist/browser/motb8-browser.bundle.js"
+    "build:browser": "esbuild src/browser/index.ts --bundle --platform=browser --format=esm --target=es2022 --outfile=dist/browser/motb8-browser.bundle.js",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
