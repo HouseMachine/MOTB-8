@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import globals from "globals";
+import babelParser from "@babel/eslint-parser";
 
 export default [
   {
@@ -21,6 +22,43 @@ export default [
         varsIgnorePattern: "^_",
         ignoreRestSiblings: true
       }]
+    }
+  },
+  {
+    files: ["src/browser/**/*.ts"],
+    languageOptions: {
+      parser: babelParser,
+      parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          plugins: [
+            ["@babel/plugin-syntax-typescript", {
+              isTSX: false
+            }]
+          ]
+        }
+      },
+      globals: {
+        ...globals.browser
+      }
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      "no-undef": "off",
+      "no-unused-vars": "off"
+    }
+  },
+  {
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      ...js.configs.recommended.rules
     }
   }
 ];

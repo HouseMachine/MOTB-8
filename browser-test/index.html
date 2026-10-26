@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MOTB-8 Browser Cryptography Acceptance Test</title>
+</head>
+<body>
+  <h1>MOTB-8 Browser Cryptography Acceptance Test</h1>
+  <pre id="results">Running tests...</pre>
+
+  <script type="module">
+    import {
+      generateBrowserMotb8Tag,
+      generateBrowserControllerKeyPair,
+      createBrowserGenesisRecord,
+      verifyBrowserGenesisRecord,
+      generateDiscoverySummary,
+      signBrowserBeacon,
+      validateBrowserBeaconStructure,
+      encryptBrowserControlFile,
+      decryptBrowserControlFile,
+      unlockBrowserControlFile
+    } from "../dist/browser/motb8-browser.bundle.js";
+
+    const results = document.getElementById("results");
+    const messages = [];
+
+    function pass(message) {
+      messages.push("PASS: " + message);
+      results.textContent = messages.join("\n");
+    }
+
+    function assert(condition, message) {
+      if (!condition) throw new Error(message);
+    }
+
+    try {
+      const tag = await generateBrowserMotb8Tag();
+      pass("Tag generation");
+
+      const controller = await generateBrowserControllerKeyPair();
+      pass("Ed25519 controller generation");
+
+      const timestamp = new Date().toISOString();
+
+      const genesis = await createBrowserGenesisRecord(
+        tag,
+        controller,
+        timestamp
+      );
+
+      const verification = await verifyBrowserGenesisRecord(genesis);
+
+      assert(
+        verification.status === "VALID_UNANCHORED",
+        "Genesis verification failed"
+      );
+
+      pass("Genesis signing and verification");
+
+      const registration = {
+        name: "Browser Acceptance Test Machine",
+        presenceScope: "single",
+        presenceType: "agent",
+        description:
+          "A synthetic machine used to test MOTB-8 browser cryptographic compatibility.",
+        goodFaith: {
+          acknowledged: true,
+          termsVersion: "1.0",
+          acknowledgedAt: timestamp
+        }
+      };
+
+      const base = {
+        ...registration,
+        motb8Tag: tag,
+        status: "active",
+        createdAt: timestamp,
+        updatedAt: timestamp,
+        controller: genesis.controller,
+        discoverySummary: generateDiscoverySummary(registration)
+      };
+
+      const beaconV10 = await signBrowserBeacon(
+        { ...base, schemaVersion: "1.0" },
+        controller
+      );
+
+      assert(
+        validateBrowserBeaconStructure(beaconV10),
+        "Beacon v1.0 validation failed"
+      );
+
+      pass("Beacon v1.0 signing and validation");
+
+      const beaconV11 = await signBrowserBeacon(
+        { ...base, schemaVersion: "1.1", revision: 1 },
+        controller
+      );
+
+      assert(
+        validateBrowserBeaconStructure(beaconV11),
+        "Beacon v1.1 validation failed"
+      );
+
+      pass("Beacon v1.1 signing and validation");
+
+      const passphrase = "MOTB8-browser-test-only-2026";
+
+      const controlFile = await encryptBrowserControlFile(
+        tag,
+        controller,
+        passphrase
+      );
+
+      pass("Control File encryption");
+
+      const recovered = await decryptBrowserControlFile(
+        controlFile,
+        passphrase
+      );
+
+      assert(
+        recovered.type === "private" && !recovered.extractable,
+        "Recovered key is not protected"
+      );
+
+      pass("Control File decryption");
+
+      const unlocked = await unlockBrowserControlFile(
+        controlFile,
+        passphrase,
+        genesis
+      );
+
+      assert(
+        unlocked.type === "private" && !unlocked.extractable,
+        "Authorized unlock failed"
+      );
+
+      const challenge = crypto.getRandomValues(new Uint8Array(32));
+      const signature = await crypto.subtle.sign(
+        "Ed25519",
+        unlocked,
+        challenge
+      );
+
+      assert(
+        await crypto.subtle.verify(
+          "Ed25519",
+          controller.publicKey,
+          signature,
+          challenge
+        ),
+        "Unlocked key does not match controller"
+      );
+
+      pass("Genesis-bound authorized unlocking");
+
+      let wrongPassphraseRejected = false;
+
+      try {
+        await decryptBrowserControlFile(
+          controlFile,
+          "incorrect-passphrase"
+        );
+      } catch {
+        wrongPassphraseRejected = true;
+      }
+
+      assert(
+        wrongPassphraseRejected,
+        "Incorrect passphrase was accepted"
+      );
+
+      pass("Incorrect passphrase rejection");
+
+      messages.push("");
+      messages.push("ALL BROWSER ACCEPTANCE TESTS PASSED");
+      results.textContent = messages.join("\n");
+    } catch (error) {
+      messages.push(
+        "FAIL: " +
+        (error instanceof Error ? error.message : String(error))
+      );
+
+      results.textContent = messages.join("\n");
+      console.error(error);
+    }
+  </script>
+</body>
+</html>

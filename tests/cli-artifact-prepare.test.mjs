@@ -62,7 +62,7 @@ test("rejects an existing symbolic-link destination", (t) => {
 
     try {
       symlinkSync(target, link, "junction");
-    } catch (error) {
+    } catch {
       t.skip("Symbolic-link creation unavailable");
       return;
     }

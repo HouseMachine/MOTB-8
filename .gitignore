@@ -147,3 +147,6 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Generated browser schema validator
+src/browser/generated/beacon-validators.cjs
