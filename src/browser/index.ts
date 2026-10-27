@@ -41,3 +41,5 @@ export {
 export {
   unlockBrowserControlFile
 } from "./unlock.js";
+
+export { verifyBrowserBeacon } from "./verify-beacon.js";

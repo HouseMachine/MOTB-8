@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,6 +17,7 @@
       generateDiscoverySummary,
       signBrowserBeacon,
       validateBrowserBeaconStructure,
+      verifyBrowserBeacon,
       encryptBrowserControlFile,
       decryptBrowserControlFile,
       unlockBrowserControlFile
@@ -104,6 +105,36 @@
       );
 
       pass("Beacon v1.1 signing and validation");
+      const beaconVerification = await verifyBrowserBeacon(
+        beaconV11,
+        genesis
+      );
+
+      assert(
+        beaconVerification.valid &&
+        beaconVerification.genesisStatus === "VALID_UNANCHORED",
+        "Browser Beacon cryptographic verification failed"
+      );
+
+      pass("Beacon v1.1 cryptographic verification");
+
+      const tamperedBeacon = {
+        ...beaconV11,
+        description: "This description was modified after signing."
+      };
+
+      const tamperedVerification = await verifyBrowserBeacon(
+        tamperedBeacon,
+        genesis
+      );
+
+      assert(
+        !tamperedVerification.valid,
+        "Tampered Beacon was accepted"
+      );
+
+      pass("Tampered Beacon rejection");
+
 
       const passphrase = "MOTB8-browser-test-only-2026";
 
