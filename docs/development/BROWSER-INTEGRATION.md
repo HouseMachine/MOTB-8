@@ -81,3 +81,86 @@ This release provides the browser-compatible core implementation.
 
 It does not complete the MOTB-8 website Create, Manage,
 publishing, or discovery experience.
+
+## Phase 23A.5-23A.7 Integration Update
+
+The browser-compatible core is now integrated into the
+MOTB-8 public website.
+
+Website repository:
+https://github.com/HouseMachine/MOTB-8-Web
+
+Website:
+https://motb8.com
+
+### Browser Create Integration
+
+The website uses the official MOTB-8 browser package to:
+
+- Generate a permanent MOTB-8 Tag.
+- Generate the local Ed25519 controller.
+- Create and sign the Genesis Record.
+- Create and sign the initial Beacon.
+- Encrypt and export the Control File.
+- Verify generated public records.
+- Package public and private artifacts separately.
+
+### Browser Manage Integration
+
+The website supports:
+
+- Importing Genesis, signed Beacon, and encrypted Control File.
+- Local controller unlocking.
+- Reconstructing editable Beacon information.
+- Reviewing permitted changes.
+- Authorizing and signing successor revisions.
+- Independent revision verification.
+- Downloading the updated signed Beacon.
+
+The permanent Tag and original Genesis binding remain unchanged.
+
+The browser update API supports explicit null removal
+instructions for optional mutable Beacon fields.
+
+See the Authorized Beacon Updates document for the
+complete deletion contract and revision continuity rules.
+
+### Verification Evidence
+
+The MOTB-8 core regression suite passed 324 tests
+following the explicit optional-field removal implementation.
+
+The website subsequently passed:
+
+- 20 Create generation tests.
+- 15 Manage tests.
+- TypeScript validation.
+- ESLint validation.
+- Next.js production build.
+- Browser Create and Manage acceptance exercises.
+
+The website Manage acceptance generated and downloaded
+a signed revision 2 and successfully reimported it.
+
+Independent verification of that specific downloaded
+revision against its predecessor remains a final
+release acceptance item.
+
+### Publication and Security Boundaries
+
+The website does not automatically publish generated
+identities or signed Beacon revisions.
+
+Operators must separately publish public records.
+
+Encrypted Control Files, controller private keys,
+and passphrases must not be publicly disclosed.
+
+VALID_UNANCHORED indicates a valid self-asserted Genesis
+binding, not independently established original ownership.
+
+A valid signed revision does not establish that it is
+the latest publicly available revision.
+
+The website does not require a central registry,
+mandatory blockchain, or server-side controller custody.
