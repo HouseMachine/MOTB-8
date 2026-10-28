@@ -261,3 +261,32 @@ The Beacon evolves through authorized, cryptographically linked revisions.
 
 **Identity persistence and information mutability are complementary
 properties of MOTB-8, not contradictory ones.**
+
+## 13. Explicit Optional-Field Removal
+
+Authorized Beacon updates support explicit removal of optional mutable fields.
+The removal instruction is represented by null in the update request.
+Null deletion markers are never included in the signed successor Beacon.
+
+| Update instruction | Behavior |
+|---|---|
+| Omitted field | Preserve previous value |
+| Valid replacement | Replace previous value |
+| Optional field set to null | Remove property |
+| Required field set to null | Reject |
+| Undefined value | Reject |
+| Protected or unsupported field | Reject |
+
+### Conditional Fields
+
+When a composite presence becomes single, representedSystemCount
+may be explicitly removed.
+
+When a custom presence type changes to a standard type,
+customPresenceType may be explicitly removed.
+
+Both Node and browser implementations use the same shared
+change-application logic before validation and signing.
+
+The resulting Beacon must independently pass schema,
+signature, and revision-continuity verification.

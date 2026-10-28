@@ -178,3 +178,30 @@ test("authorized update preserves optional discovery metadata", () => {
     true
   );
 });
+test("authorized update removes optional Beacon fields", () => {
+  const fixture = createFixture();
+
+  const first = update(fixture, {
+    capabilities: [{ id: "research", name: "Research" }],
+    taxonomy: [{ domain: "Technology", category: "AI" }]
+  });
+
+  const second = updatePresenceBeacon({
+    previousBeacon: first.beacon,
+    genesis: fixture.genesis,
+    controlFile: fixture.controlFile,
+    passphrase,
+    changes: {
+      capabilities: null,
+      taxonomy: null
+    }
+  });
+
+  assert.equal(second.beacon.revision, 3);
+  assert.equal(Object.hasOwn(second.beacon, "capabilities"), false);
+  assert.equal(Object.hasOwn(second.beacon, "taxonomy"), false);
+  assert.equal(
+    verifyBeaconRevision(first.beacon, second.beacon, fixture.genesis).valid,
+    true
+  );
+});

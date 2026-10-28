@@ -209,3 +209,52 @@ test("optional capabilities survive a signed update", async () => {
     true
   );
 });
+test("browser update removes optional fields in a signed revision", async () => {
+  const fixture = await createFixture();
+
+  const first = await update(fixture, {
+    presenceScope: "composite",
+    representedSystemCount: 3,
+    presenceType: "other",
+    customPresenceType: "Research Cluster",
+    capabilities: [{ id: "research", name: "Research" }]
+  });
+
+  const second = await updateBrowserPresenceBeacon({
+    previousBeacon: first.beacon,
+    genesis: fixture.genesis,
+    controlFile: fixture.controlFile,
+    passphrase,
+    changes: {
+      presenceScope: "single",
+      representedSystemCount: null,
+      presenceType: "agent",
+      customPresenceType: null,
+      capabilities: null
+    }
+  });
+
+  assert.equal(second.beacon.revision, 3);
+  assert.equal(second.beacon.presenceScope, "single");
+  assert.equal(second.beacon.presenceType, "agent");
+
+  for (const field of [
+    "representedSystemCount",
+    "customPresenceType",
+    "capabilities"
+  ]) {
+    assert.equal(Object.hasOwn(second.beacon, field), false);
+  }
+
+  assert.equal(
+    verifyBeaconRevision(first.beacon, second.beacon, fixture.genesis).valid,
+    true
+  );
+
+  assert.equal(
+    (await verifyBrowserBeaconRevision(
+      first.beacon, second.beacon, fixture.genesis
+    )).valid,
+    true
+  );
+});

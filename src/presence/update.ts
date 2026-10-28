@@ -4,6 +4,7 @@ import { computeBeaconHash } from "../beacon/hash.js";
 import { generateDiscoverySummary } from "../beacon/summary.js";
 import { validateUnsignedBeaconStructure } from "../beacon/validate.js";
 import { signAuthorizedBeacon } from "../control/sign-authorized.js";
+import { applyBeaconChanges } from "./apply-changes.js";
 
 import type { MOTB8BeaconV11 } from "../beacon/types-v1.1.js";
 import type {
@@ -77,15 +78,13 @@ export function updatePresenceBeacon(
   ).toISOString();
 
   const unsigned: Omit<MOTB8BeaconV11, "proof"> = {
-    ...unsignedPrevious,
-    ...changes,
+    ...applyBeaconChanges(previous, changes),
     revision: previous.revision + 1,
     previousBeaconHash,
     updatedAt,
-    discoverySummary: generateDiscoverySummary({
-      ...previous,
-      ...changes
-    })
+    discoverySummary: generateDiscoverySummary(
+      applyBeaconChanges(previous, changes)
+    )
   };
 
   if (!validateUnsignedBeaconStructure(unsigned)) {

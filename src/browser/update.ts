@@ -3,7 +3,7 @@ import canonicalize from "canonicalize";
 import type { GenesisRecord } from "../genesis/create.js";
 import type { MOTB8BeaconV11 } from "../beacon/types-v1.1.js";
 import type { EncryptedControlFile } from "../control/encrypt.js";
-import type { BeaconUpdateChanges } from "../presence/update-types.js";
+import type { BeaconChangesWithRemoval } from "../presence/apply-changes.js";
 
 import { generateDiscoverySummary } from "../beacon/summary.js";
 import { verifyBrowserBeacon } from "./verify-beacon.js";
@@ -11,13 +11,14 @@ import { validateUnsignedBrowserBeaconStructure } from "./validate.js";
 import { computeBrowserBeaconHash } from "./hash.js";
 import { unlockBrowserControlFile } from "./unlock.js";
 import { verifyBrowserBeaconRevision } from "./revision.js";
+import { applyBeaconChanges } from "../presence/apply-changes.js";
 
 export interface UpdateBrowserPresenceBeaconInput {
   previousBeacon: MOTB8BeaconV11;
   genesis: GenesisRecord;
   controlFile: EncryptedControlFile;
   passphrase: string;
-  changes: BeaconUpdateChanges;
+  changes: BeaconChangesWithRemoval;
 }
 
 export interface UpdatedBrowserPresenceBeacon {
@@ -103,15 +104,13 @@ export async function updateBrowserPresenceBeacon(
   ).toISOString();
 
   const unsigned: Omit<MOTB8BeaconV11, "proof"> = {
-    ...unsignedPrevious,
-    ...changes,
+    ...applyBeaconChanges(previous, changes),
     revision: previous.revision + 1,
     previousBeaconHash,
     updatedAt,
-    discoverySummary: generateDiscoverySummary({
-      ...previous,
-      ...changes
-    })
+    discoverySummary: generateDiscoverySummary(
+      applyBeaconChanges(previous, changes)
+    )
   };
 
   if (!validateUnsignedBrowserBeaconStructure(unsigned)) {

@@ -1,6 +1,7 @@
 ﻿import type { MOTB8BeaconV11 } from "../beacon/types-v1.1.js";
 import type { GenesisRecord } from "../genesis/create.js";
 import type { EncryptedControlFile } from "../control/encrypt.js";
+import type { BeaconChangesWithRemoval } from "./apply-changes.js";
 
 export type BeaconUpdateChanges = Partial<
   Pick<
@@ -27,7 +28,7 @@ export interface UpdatePresenceBeaconInput {
   genesis: GenesisRecord;
   controlFile: EncryptedControlFile;
   passphrase: string;
-  changes: BeaconUpdateChanges;
+  changes: BeaconChangesWithRemoval;
 }
 
 export interface UpdatedPresenceBeacon {
