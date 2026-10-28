@@ -1,4 +1,4 @@
-﻿/**
+/**
  * MOTB-8 Browser Entry Point
  *
  * Browser-compatible access to MOTB-8 core functionality.
@@ -43,3 +43,10 @@ export {
 } from "./unlock.js";
 
 export { verifyBrowserBeacon } from "./verify-beacon.js";
+export { computeBrowserBeaconHash } from "./hash.js";
+export { verifyBrowserBeaconRevision } from "./revision.js";
+export { updateBrowserPresenceBeacon } from "./update.js";
+export type {
+  UpdateBrowserPresenceBeaconInput,
+  UpdatedBrowserPresenceBeacon
+} from "./update.js";
